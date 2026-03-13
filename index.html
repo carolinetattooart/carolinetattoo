@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caroline Tattoo — Viña del Mar</title>
+  <meta name="description" content="Tatuadora profesional en Viña del Mar. Blackwork, linework y diseños personalizados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#inicio" class="nav-logo">Caroline</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#sobre-mi">Yo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="t-sun">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </span>
+        <span class="t-moon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
+      <a href="#cita" class="nav-cta">Agendar cita</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Tatuadora · Viña del Mar, Chile
+      </div>
+      <h1 class="hero-title">
+        <span>El arte</span>
+        <em>permanece.</em>
+      </h1>
+      <p class="hero-sub">Blackwork y linework. Cada pieza,<br>diseñada para durar toda una vida.</p>
+      <div class="hero-actions">
+        <a href="#cita" class="btn-primary">
+          Agendar cita
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#portafolio" class="btn-ghost">Ver portafolio</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-frame">
+        <div class="img-placeholder hero-ph"><span>Tu foto principal</span></div>
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponible para citas
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-bar"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-inner">
+      <span>Blackwork</span><span class="m-sep">—</span>
+      <span>Linework</span><span class="m-sep">—</span>
+      <span>Ornamental</span><span class="m-sep">—</span>
+      <span>Minimalista</span><span class="m-sep">—</span>
+      <span>Diseño exclusivo</span><span class="m-sep">—</span>
+      <span>Viña del Mar</span><span class="m-sep">—</span>
+      <span>Blackwork</span><span class="m-sep">—</span>
+      <span>Linework</span><span class="m-sep">—</span>
+      <span>Ornamental</span><span class="m-sep">—</span>
+      <span>Minimalista</span><span class="m-sep">—</span>
+      <span>Diseño exclusivo</span><span class="m-sep">—</span>
+      <span>Viña del Mar</span><span class="m-sep">—</span>
+    </div>
+  </div>
+
+  <!-- PORTAFOLIO -->
+  <section id="portafolio" class="section portafolio">
+    <div class="section-top">
+      <div>
+        <p class="section-label">Trabajos</p>
+        <h2 class="section-title">Portafolio</h2>
+      </div>
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Todo</button>
+        <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+        <button class="filter-btn" data-filter="linework">Linework</button>
+        <button class="filter-btn" data-filter="ornamental">Ornamental</button>
+        <button class="filter-btn" data-filter="minimalista">Minimalista</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="p-item tall" data-category="blackwork">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>bw-01</span></div>
+          <div class="p-label"><span>Blackwork</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item" data-category="linework">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>lw-01</span></div>
+          <div class="p-label"><span>Linework</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item" data-category="ornamental">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>or-01</span></div>
+          <div class="p-label"><span>Ornamental</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item" data-category="minimalista">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>mn-01</span></div>
+          <div class="p-label"><span>Minimalista</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item tall" data-category="linework">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>lw-02</span></div>
+          <div class="p-label"><span>Linework</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item" data-category="blackwork">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>bw-02</span></div>
+          <div class="p-label"><span>Blackwork</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item" data-category="ornamental">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>or-02</span></div>
+          <div class="p-label"><span>Ornamental</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="p-item" data-category="blackwork">
+        <div class="p-wrap">
+          <div class="img-placeholder"><span>bw-03</span></div>
+          <div class="p-label"><span>Blackwork</span><span>↗</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-footer">
+      <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-ghost">
+        Ver más en Instagram
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section servicios">
+    <div class="section-top">
+      <p class="section-label">Lo que ofrezco</p>
+      <h2 class="section-title">Servicios</h2>
+    </div>
+    <div class="servicios-list">
+      <a href="#cita" class="srv-row reveal">
+        <span class="srv-n">01</span>
+        <span class="srv-t">Tatuaje personalizado</span>
+        <span class="srv-d">Diseño exclusivo desde cero, creado para ti</span>
+        <span class="srv-a">↗</span>
+      </a>
+      <a href="#contacto" class="srv-row reveal">
+        <span class="srv-n">02</span>
+        <span class="srv-t">Flash disponible</span>
+        <span class="srv-d">Diseños únicos listos para tatuar</span>
+        <span class="srv-a">↗</span>
+      </a>
+      <a href="#contacto" class="srv-row reveal">
+        <span class="srv-n">03</span>
+        <span class="srv-t">Mentoría para artistas</span>
+        <span class="srv-d">Sesiones 1 a 1 — técnica, portafolio, negocio</span>
+        <span class="srv-a">↗</span>
+      </a>
+      <a href="#tienda" class="srv-row reveal">
+        <span class="srv-n">04</span>
+        <span class="srv-t">Merch &amp; diseños</span>
+        <span class="srv-d">Ilustraciones originales en productos físicos</span>
+        <span class="srv-a">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section sobre-mi">
+    <div class="sobre-img reveal">
+      <div class="img-placeholder sobre-ph"><span>Tu foto<br>de perfil</span></div>
+      <div class="sobre-tag">
+        <span>3 años</span>
+        <span class="t-sep">/</span>
+        <span>Blackwork</span>
+      </div>
+    </div>
+    <div class="sobre-text">
+      <p class="section-label reveal">Sobre mí</p>
+      <h2 class="section-title reveal">Caroline</h2>
+      <p class="reveal">Tatuadora basada en Viña del Mar, especializada en blackwork y linework. Mi trabajo busca la precisión en cada trazo — geometría que convive con lo orgánico.</p>
+      <p class="reveal">Trabajo con citas limitadas para garantizar atención completa en cada proyecto.</p>
+      <div class="sobre-stats reveal">
+        <div class="st"><span class="st-n">3+</span><span class="st-l">Años</span></div>
+        <div class="st-sep"></div>
+        <div class="st"><span class="st-n">100%</span><span class="st-l">Exclusivo</span></div>
+        <div class="st-sep"></div>
+        <div class="st"><span class="st-n">VdM</span><span class="st-l">Chile</span></div>
+      </div>
+      <div class="sobre-links reveal">
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-ghost">@caroline_tattoo_art</a>
+        <a href="https://wa.me/56937021461" target="_blank" rel="noopener" class="btn-icon" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos" class="section cursos">
+    <div class="cursos-wrap">
+      <div class="cursos-left">
+        <p class="section-label reveal">Formación</p>
+        <h2 class="section-title reveal">Cursos &amp;<br><em>seminarios</em></h2>
+        <p class="reveal">Próximamente lanzaré programas para tatuadores. Deja tu correo y te aviso primero.</p>
+        <form class="waitlist-form reveal" id="waitlistForm">
+          <input type="email" placeholder="tu@correo.com" required />
+          <button type="submit">Avisar <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </form>
+        <p class="waitlist-msg" id="waitlistMsg"></p>
+      </div>
+      <div class="cursos-right">
+        <div class="curso-card reveal">
+          <span class="c-tag">Próximamente</span>
+          <h3>Fundamentos de blackwork</h3>
+          <p>Técnica, composición y trazo</p>
+        </div>
+        <div class="curso-card reveal">
+          <span class="c-tag">Próximamente</span>
+          <h3>Linework avanzado</h3>
+          <p>Precisión y consistencia</p>
+        </div>
+        <div class="curso-card reveal">
+          <span class="c-tag">Próximamente</span>
+          <h3>Negocio del tatuador</h3>
+          <p>Marca, precios y clientes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITA -->
+  <section id="cita" class="section cita">
+    <div class="cita-wrap">
+      <div class="cita-left">
+        <p class="section-label reveal">¿Lista para empezar?</p>
+        <h2 class="section-title reveal">Agenda tu<br><em>cita</em></h2>
+        <p class="reveal">Reserva tu consulta. Sin costo, sin compromiso — solo conversamos sobre tu idea.</p>
+        <div class="cita-btns reveal">
+          <a href="https://calendly.com/caroline-tattoo" target="_blank" rel="noopener" class="btn-primary">
+            Reservar en Calendly
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+          </a>
+          <a href="https://wa.me/56937021461?text=Hola%20Caroline%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener" class="btn-ghost">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="calendly-wrap reveal">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/caroline-tattoo/consulta" style="min-width:280px;height:500px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIENDA -->
+  <section id="tienda" class="section tienda">
+    <div class="tienda-wrap">
+      <span class="tienda-badge reveal">Próximamente</span>
+      <h2 class="section-title reveal">Merch &amp; <em>diseños</em></h2>
+      <p class="reveal">Ilustraciones originales en productos físicos.</p>
+      <form class="waitlist-form reveal" id="shopWaitlistForm">
+        <input type="email" placeholder="Avísame cuando esté disponible" required />
+        <button type="submit">Notificarme <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </form>
+      <p class="waitlist-msg" id="shopWaitlistMsg"></p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="section-top">
+      <p class="section-label">Hablemos</p>
+      <h2 class="section-title">Contacto</h2>
+    </div>
+    <div class="contacto-grid">
+      <div class="contacto-info">
+        <div class="ci reveal"><span class="ci-l">Ubicación</span><span class="ci-v">Viña del Mar, Chile</span></div>
+        <div class="ci reveal"><span class="ci-l">Instagram</span><a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="ci-v ci-link">@caroline_tattoo_art</a></div>
+        <div class="ci reveal"><span class="ci-l">WhatsApp</span><a href="https://wa.me/56937021461" target="_blank" rel="noopener" class="ci-v ci-link">+56 9 3702 1461</a></div>
+        <div class="ci reveal"><span class="ci-l">Citas</span><a href="#cita" class="ci-v ci-link">Calendly →</a></div>
+      </div>
+      <form class="contacto-form reveal" id="contactoForm">
+        <div class="form-row">
+          <div class="field"><input type="text" id="fn" placeholder=" " required /><label for="fn">Nombre</label></div>
+          <div class="field"><input type="email" id="fe" placeholder=" " required /><label for="fe">Correo</label></div>
+        </div>
+        <div class="field"><input type="text" id="fs" placeholder=" " /><label for="fs">Asunto</label></div>
+        <div class="field"><textarea id="fm" placeholder=" " rows="5" required></textarea><label for="fm">Tu idea...</label></div>
+        <button type="submit" class="btn-primary">Enviar mensaje <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#inicio" class="footer-logo">Caroline</a>
+      <p class="footer-copy">© 2025 Caroline Tattoo · Viña del Mar</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/56937021461" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#cita">Agendar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
