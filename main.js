@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  // ── SCROLL AL TOP AL CARGAR ────────────────────────────────────────────────
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+  window.addEventListener('load', () => window.scrollTo(0, 0));
+
   // ── THEME ──────────────────────────────────────────────────────────────────
   const html = document.documentElement;
   const themeBtn = document.getElementById('themeToggle');
