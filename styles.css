@@ -668,6 +668,11 @@ p {
   gap: clamp(40px, 7vw, 80px); align-items: start;
 }
 .contacto-info { display: flex; flex-direction: column; }
+.contacto-info-solo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0 clamp(20px, 4vw, 60px);
+}
 .ci {
   display: flex; flex-direction: column; gap: 6px;
   padding: 18px 0; border-bottom: 1px solid var(--bdr);
