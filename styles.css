@@ -474,7 +474,7 @@ p {
 }
 .car-btn:hover { background: var(--bg3); border-color: var(--bdr3); color: var(--txt); transform: scale(1.08); }
 
-.car-dots { display: flex; gap: 7px; }
+.car-dots { display: none; }
 .dot-btn {
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--bdr2); border: none; cursor: pointer;
