@@ -15,7 +15,8 @@
     initParticles();
   });
 
-  // ── PARTICLES ──────────────────────────────────────────────────────────────
+  // ── PARTICLES — solo desktop ───────────────────────────────────────────────
+  const isMobile = () => window.innerWidth <= 768;
   const canvas = document.getElementById('canvas');
   const ctx = canvas?.getContext('2d');
   let pts = [], raf;
@@ -35,7 +36,7 @@
     };
   }
   function initParticles() {
-    if (!canvas) return;
+    if (!canvas || isMobile()) return;
     cancelAnimationFrame(raf);
     resize();
     pts = Array.from({ length: Math.min(Math.floor(canvas.width * canvas.height / 18000), 60) }, mk);
@@ -61,7 +62,14 @@
     }
     raf = requestAnimationFrame(loop);
   }
-  window.addEventListener('resize', () => resize(), { passive: true });
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (isMobile()) { cancelAnimationFrame(raf); return; }
+      resize();
+    }, 200);
+  }, { passive: true });
   initParticles();
 
   // ── NAV ────────────────────────────────────────────────────────────────────
@@ -172,10 +180,10 @@
       const siblings = [...e.target.parentElement.children]
         .filter(el => el.classList.contains('reveal') && !el.classList.contains('visible'));
       const i = siblings.indexOf(e.target);
-      setTimeout(() => e.target.classList.add('visible'), i * 90);
+      setTimeout(() => e.target.classList.add('visible'), i * 70);
       obs.unobserve(e.target);
     });
-  }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: .05, rootMargin: '0px 0px -20px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
