@@ -77,10 +77,14 @@ ul { list-style: none; }
   background-size: 200px 200px;
 }
 
-/* Canvas */
+/* Canvas — solo desktop */
 #canvas {
   position: fixed; inset: 0; z-index: 0;
   pointer-events: none; opacity: .4;
+}
+@media (max-width: 768px) {
+  #canvas { display: none; }
+  .noise { display: none; }
 }
 
 /* Typography */
@@ -330,7 +334,7 @@ p {
 
 .hero-badge {
   position: absolute;
-  bottom: 24px; left: -10px;
+  bottom: 24px; left: 12px;
   display: flex; align-items: center; gap: 8px;
   padding: 10px 20px;
   background: color-mix(in srgb, var(--bg) 82%, transparent);
@@ -349,7 +353,7 @@ p {
 
 .hero-stat-float {
   position: absolute;
-  top: 20px; right: -16px;
+  top: 20px; right: 12px;
   display: flex; flex-direction: column; gap: 2px;
   padding: 14px 18px;
   background: color-mix(in srgb, var(--bg) 82%, transparent);
@@ -381,8 +385,8 @@ p {
 }
 
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(.75); } }
-@keyframes heroIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes heroFade { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes heroIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heroFade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
 /* TICKER */
 .ticker {
