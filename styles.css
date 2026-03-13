@@ -931,6 +931,10 @@ p {
   .btn-fill, .btn-ghost { padding: 12px 18px; font-size: .85rem; }
 }
 
+@media (max-width: 768px) {
+  .slide-meta { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .2s !important; }
   #canvas { display: none; }
