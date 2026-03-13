@@ -7,27 +7,30 @@
   <meta name="description" content="Tatuadora profesional en Viña del Mar. Blackwork, linework y diseños personalizados." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <canvas id="canvas"></canvas>
+  <div class="noise"></div>
 
   <nav id="nav">
-    <a href="#inicio" class="nav-logo">Caroline</a>
+    <a href="#inicio" class="nav-logo">
+      <span class="logo-c">C</span>aroline
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#portafolio">Portafolio</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#cursos">Cursos</a></li>
-      <li><a href="#sobre-mi">Yo</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="nav-right">
       <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">
-        <svg class="ico-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-        <svg class="ico-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="ico-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <a href="#cita" class="nav-cta">Agendar</a>
+      <a href="#cita" class="nav-cta">Agendar cita</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span>
       </button>
@@ -36,34 +39,65 @@
 
   <!-- HERO -->
   <section id="inicio" class="hero">
-    <div class="hero-text">
-      <p class="eyebrow"><span class="pulse-dot"></span>Viña del Mar, Chile</p>
-      <h1>El arte<br><em>permanece.</em></h1>
-      <p class="hero-desc">Blackwork y linework. Cada pieza diseñada para durar toda una vida.</p>
-      <div class="hero-btns">
-        <a href="#cita" class="btn-fill">Agendar cita <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="#portafolio" class="btn-outline">Ver portafolio</a>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="pulse-dot"></span>Viña del Mar · Chile</p>
+        <h1 class="hero-h1">El arte<br><em>permanece.</em></h1>
+        <p class="hero-desc">Blackwork y linework.<br>Cada pieza diseñada para durar toda una vida.</p>
+        <div class="hero-btns">
+          <a href="#cita" class="btn-fill">Agendar cita <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#portafolio" class="btn-ghost">Ver portafolio</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <div class="placeholder hero-ph">
+            <span>Tu foto principal</span>
+          </div>
+          <div class="frame-deco frame-deco-tl"></div>
+          <div class="frame-deco frame-deco-br"></div>
+        </div>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Disponible para citas</span>
+        </div>
+        <div class="hero-stat-float">
+          <span class="fsn">3+</span>
+          <span class="fsl">años de experiencia</span>
+        </div>
       </div>
     </div>
-    <div class="hero-img-wrap">
-      <div class="hero-img">
-        <div class="placeholder hero-ph">Tu foto principal</div>
-      </div>
-      <div class="hero-chip"><span class="chip-dot"></span>Disponible para citas</div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>Blackwork</span><span class="tdot">·</span><span>Linework</span><span class="tdot">·</span><span>Ornamental</span><span class="tdot">·</span><span>Minimalista</span><span class="tdot">·</span><span>Flash disponible</span><span class="tdot">·</span><span>Viña del Mar</span><span class="tdot">·</span><span>Blackwork</span><span class="tdot">·</span><span>Linework</span><span class="tdot">·</span><span>Ornamental</span><span class="tdot">·</span><span>Minimalista</span><span class="tdot">·</span><span>Flash disponible</span><span class="tdot">·</span><span>Viña del Mar</span><span class="tdot">·</span>
+      <span>Blackwork</span><span class="tdot">✦</span>
+      <span>Linework</span><span class="tdot">✦</span>
+      <span>Ornamental</span><span class="tdot">✦</span>
+      <span>Minimalista</span><span class="tdot">✦</span>
+      <span>Flash disponible</span><span class="tdot">✦</span>
+      <span>Viña del Mar</span><span class="tdot">✦</span>
+      <span>Blackwork</span><span class="tdot">✦</span>
+      <span>Linework</span><span class="tdot">✦</span>
+      <span>Ornamental</span><span class="tdot">✦</span>
+      <span>Minimalista</span><span class="tdot">✦</span>
+      <span>Flash disponible</span><span class="tdot">✦</span>
+      <span>Viña del Mar</span><span class="tdot">✦</span>
     </div>
   </div>
 
   <!-- PORTAFOLIO -->
   <section id="portafolio" class="section">
     <div class="sec-head">
-      <div><p class="label">Trabajos</p><h2>Portafolio</h2></div>
+      <div class="sec-title-group">
+        <p class="label">Trabajos seleccionados</p>
+        <h2>Portafolio</h2>
+      </div>
       <div class="filters">
         <button class="f-btn active" data-filter="all">Todo</button>
         <button class="f-btn" data-filter="blackwork">Blackwork</button>
@@ -74,77 +108,165 @@
     </div>
     <div class="carousel-outer">
       <div class="carousel" id="carousel">
-        <div class="slide" data-category="blackwork"><div class="slide-img"><div class="placeholder">bw-01<br><small>Blackwork</small></div></div></div>
-        <div class="slide" data-category="linework"><div class="slide-img"><div class="placeholder">lw-01<br><small>Linework</small></div></div></div>
-        <div class="slide" data-category="ornamental"><div class="slide-img"><div class="placeholder">or-01<br><small>Ornamental</small></div></div></div>
-        <div class="slide" data-category="minimalista"><div class="slide-img"><div class="placeholder">mn-01<br><small>Minimalista</small></div></div></div>
-        <div class="slide" data-category="blackwork"><div class="slide-img"><div class="placeholder">bw-02<br><small>Blackwork</small></div></div></div>
-        <div class="slide" data-category="linework"><div class="slide-img"><div class="placeholder">lw-02<br><small>Linework</small></div></div></div>
-        <div class="slide" data-category="ornamental"><div class="slide-img"><div class="placeholder">or-02<br><small>Ornamental</small></div></div></div>
-        <div class="slide" data-category="blackwork"><div class="slide-img"><div class="placeholder">bw-03<br><small>Blackwork</small></div></div></div>
-        <div class="slide" data-category="minimalista"><div class="slide-img"><div class="placeholder">mn-02<br><small>Minimalista</small></div></div></div>
+        <div class="slide" data-category="blackwork">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">bw-01<br><small>Blackwork</small></div></div>
+            <div class="slide-meta"><span>Blackwork</span><span class="slide-num">01</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="linework">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">lw-01<br><small>Linework</small></div></div>
+            <div class="slide-meta"><span>Linework</span><span class="slide-num">02</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="ornamental">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">or-01<br><small>Ornamental</small></div></div>
+            <div class="slide-meta"><span>Ornamental</span><span class="slide-num">03</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="minimalista">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">mn-01<br><small>Minimalista</small></div></div>
+            <div class="slide-meta"><span>Minimalista</span><span class="slide-num">04</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="blackwork">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">bw-02<br><small>Blackwork</small></div></div>
+            <div class="slide-meta"><span>Blackwork</span><span class="slide-num">05</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="linework">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">lw-02<br><small>Linework</small></div></div>
+            <div class="slide-meta"><span>Linework</span><span class="slide-num">06</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="ornamental">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">or-02<br><small>Ornamental</small></div></div>
+            <div class="slide-meta"><span>Ornamental</span><span class="slide-num">07</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="blackwork">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">bw-03<br><small>Blackwork</small></div></div>
+            <div class="slide-meta"><span>Blackwork</span><span class="slide-num">08</span></div>
+          </div>
+        </div>
+        <div class="slide" data-category="minimalista">
+          <div class="slide-inner">
+            <div class="slide-img"><div class="placeholder">mn-02<br><small>Minimalista</small></div></div>
+            <div class="slide-meta"><span>Minimalista</span><span class="slide-num">09</span></div>
+          </div>
+        </div>
       </div>
-      <button class="car-btn prev" id="carPrev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></button>
-      <button class="car-btn next" id="carNext" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-      <div class="car-dots" id="carDots"></div>
+      <div class="carousel-controls">
+        <button class="car-btn" id="carPrev" aria-label="Anterior">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="car-dots" id="carDots"></div>
+        <button class="car-btn" id="carNext" aria-label="Siguiente">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
     <div class="sec-foot">
-      <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-outline">Ver más en Instagram <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a>
+      <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-ghost ig-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Ver más en Instagram
+      </a>
     </div>
   </section>
 
   <!-- SERVICIOS -->
   <section id="servicios" class="section section-alt">
-    <div class="sec-head"><p class="label">Lo que ofrezco</p><h2>Servicios</h2></div>
-    <div class="cards">
-      <a href="#cita" class="card reveal">
-        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-        <h3>Tatuaje personalizado</h3>
+    <div class="sec-head">
+      <div class="sec-title-group">
+        <p class="label">Lo que ofrezco</p>
+        <h2>Servicios</h2>
+      </div>
+    </div>
+    <div class="services-grid">
+      <a href="#cita" class="service-card reveal">
+        <div class="sc-number">01</div>
+        <div class="sc-ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Tatuaje<br>personalizado</h3>
         <p>Diseño exclusivo desde cero, creado para ti.</p>
-        <span class="clink">Agendar →</span>
+        <span class="sc-link">Agendar →</span>
       </a>
-      <a href="#contacto" class="card reveal">
-        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
-        <h3>Flash disponible</h3>
+      <a href="#contacto" class="service-card reveal">
+        <div class="sc-number">02</div>
+        <div class="sc-ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3>Flash<br>disponible</h3>
         <p>Diseños únicos listos para tatuar.</p>
-        <span class="clink">Consultar →</span>
+        <span class="sc-link">Consultar →</span>
       </a>
-      <a href="#contacto" class="card reveal">
-        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Mentoría 1 a 1</h3>
+      <a href="#contacto" class="service-card reveal">
+        <div class="sc-number">03</div>
+        <div class="sc-ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Mentoría<br>1 a 1</h3>
         <p>Sesiones privadas para tatuadores.</p>
-        <span class="clink">Más info →</span>
+        <span class="sc-link">Más info →</span>
       </a>
-      <a href="#tienda" class="card reveal">
-        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <h3>Merch &amp; diseños</h3>
+      <a href="#tienda" class="service-card reveal">
+        <div class="sc-number">04</div>
+        <div class="sc-ico">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <h3>Merch &amp;<br>diseños</h3>
         <p>Ilustraciones originales en productos físicos.</p>
-        <span class="clink">Ver tienda →</span>
+        <span class="sc-link">Ver tienda →</span>
       </a>
     </div>
   </section>
 
   <!-- SOBRE MÍ -->
   <section id="sobre-mi" class="section sobre">
-    <div class="sobre-img reveal">
-      <div class="sobre-frame"><div class="placeholder sobre-ph">Tu foto<br>de perfil</div></div>
-      <div class="sobre-chip2">3 años · Blackwork · VdM</div>
+    <div class="sobre-visual reveal">
+      <div class="sobre-frame">
+        <div class="placeholder sobre-ph">Tu foto<br>de perfil</div>
+      </div>
+      <div class="sobre-tag">3 años · Blackwork · VdM</div>
     </div>
     <div class="sobre-body">
       <p class="label reveal">Sobre mí</p>
       <h2 class="reveal">Caroline</h2>
-      <p class="reveal">Tatuadora en Viña del Mar, especializada en blackwork y linework. Precisión en cada trazo — geometría que convive con lo orgánico.</p>
+      <div class="sobre-divider reveal"></div>
+      <p class="reveal sobre-lead">Tatuadora en Viña del Mar, especializada en blackwork y linework. Precisión en cada trazo — geometría que convive con lo orgánico.</p>
       <p class="reveal">Trabajo con citas limitadas para garantizar atención completa en cada proyecto.</p>
       <div class="stats reveal">
-        <div class="stat"><span class="sn">3+</span><span class="sl">Años</span></div>
+        <div class="stat">
+          <span class="sn">3+</span>
+          <span class="sl">Años</span>
+        </div>
         <div class="sdiv"></div>
-        <div class="stat"><span class="sn">100%</span><span class="sl">Exclusivo</span></div>
+        <div class="stat">
+          <span class="sn">100%</span>
+          <span class="sl">Personalizado</span>
+        </div>
         <div class="sdiv"></div>
-        <div class="stat"><span class="sn">VdM</span><span class="sl">Chile</span></div>
+        <div class="stat">
+          <span class="sn">VdM</span>
+          <span class="sl">Chile</span>
+        </div>
       </div>
       <div class="sobre-links reveal">
-        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-outline">@caroline_tattoo_art</a>
-        <a href="https://wa.me/56937021461" target="_blank" rel="noopener" class="icon-btn" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @caroline_tattoo_art
+        </a>
+        <a href="https://wa.me/56937021461" target="_blank" rel="noopener" class="icon-btn" aria-label="WhatsApp">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -155,7 +277,7 @@
       <div class="cursos-left">
         <p class="label reveal">Formación</p>
         <h2 class="reveal">Cursos &amp;<br><em>seminarios</em></h2>
-        <p class="reveal">Próximamente programas para tatuadores. Deja tu correo y te aviso primero.</p>
+        <p class="reveal">Próximamente programas para tatuadores.<br>Deja tu correo y te aviso primero.</p>
         <form class="waitlist reveal" id="waitlistForm">
           <input type="email" placeholder="tu@correo.com" required />
           <button type="submit">Avisar</button>
@@ -163,9 +285,30 @@
         <p class="wl-msg" id="waitlistMsg"></p>
       </div>
       <div class="cursos-right">
-        <div class="curso-card reveal"><span class="soon">Próximamente</span><h3>Fundamentos de blackwork</h3><p>Técnica, composición y trazo</p></div>
-        <div class="curso-card reveal"><span class="soon">Próximamente</span><h3>Linework avanzado</h3><p>Precisión y consistencia</p></div>
-        <div class="curso-card reveal"><span class="soon">Próximamente</span><h3>Negocio del tatuador</h3><p>Marca, precios y clientes</p></div>
+        <div class="curso-card reveal">
+          <div class="cc-top">
+            <span class="soon-pill">Próximamente</span>
+            <span class="cc-num">01</span>
+          </div>
+          <h3>Fundamentos de blackwork</h3>
+          <p>Técnica, composición y trazo</p>
+        </div>
+        <div class="curso-card reveal">
+          <div class="cc-top">
+            <span class="soon-pill">Próximamente</span>
+            <span class="cc-num">02</span>
+          </div>
+          <h3>Linework avanzado</h3>
+          <p>Precisión y consistencia</p>
+        </div>
+        <div class="curso-card reveal">
+          <div class="cc-top">
+            <span class="soon-pill">Próximamente</span>
+            <span class="cc-num">03</span>
+          </div>
+          <h3>Negocio del tatuador</h3>
+          <p>Marca, precios y clientes</p>
+        </div>
       </div>
     </div>
   </section>
@@ -178,8 +321,14 @@
         <h2 class="reveal">Hablemos de<br>tu <em>idea</em></h2>
         <p class="reveal">Consulta sin costo — conversamos sobre tu proyecto.</p>
         <div class="cita-btns reveal">
-          <a href="https://calendly.com/caroline-tattoo" target="_blank" rel="noopener" class="btn-fill">Reservar en Calendly <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a>
-          <a href="https://wa.me/56937021461?text=Hola%20Caroline%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener" class="btn-outline wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+          <a href="https://calendly.com/caroline-tattoo" target="_blank" rel="noopener" class="btn-fill">
+            Reservar en Calendly
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+          </a>
+          <a href="https://wa.me/56937021461?text=Hola%20Caroline%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener" class="btn-ghost wa-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
         </div>
       </div>
       <div class="calendly-box reveal">
@@ -192,7 +341,7 @@
   <!-- TIENDA -->
   <section id="tienda" class="section section-alt tienda">
     <div class="tienda-inner">
-      <span class="soon reveal">Próximamente</span>
+      <span class="soon-pill reveal">Próximamente</span>
       <h2 class="reveal">Merch &amp; <em>diseños</em></h2>
       <p class="reveal">Ilustraciones originales en productos físicos.</p>
       <form class="waitlist reveal" id="shopForm">
@@ -205,7 +354,12 @@
 
   <!-- CONTACTO -->
   <section id="contacto" class="section">
-    <div class="sec-head"><p class="label">Hablemos</p><h2>Contacto</h2></div>
+    <div class="sec-head">
+      <div class="sec-title-group">
+        <p class="label">Hablemos</p>
+        <h2>Contacto</h2>
+      </div>
+    </div>
     <div class="contacto-grid">
       <div class="contacto-info">
         <div class="ci reveal"><span class="ci-l">Ubicación</span><span class="ci-v">Viña del Mar, Chile</span></div>
@@ -220,7 +374,7 @@
         </div>
         <div class="field"><input type="text" id="fs" placeholder=" " /><label for="fs">Asunto</label></div>
         <div class="field"><textarea id="fm" placeholder=" " rows="5" required></textarea><label for="fm">Tu idea...</label></div>
-        <button type="submit" class="btn-fill">Enviar mensaje <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button type="submit" class="btn-fill">Enviar mensaje <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <p class="form-msg" id="formMsg"></p>
       </form>
     </div>
@@ -228,7 +382,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <a href="#inicio" class="footer-logo">Caroline</a>
+      <a href="#inicio" class="footer-logo"><span class="logo-c">C</span>aroline</a>
       <p class="footer-copy">© 2025 Caroline Tattoo · Viña del Mar</p>
       <div class="footer-links">
         <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener">Instagram</a>
