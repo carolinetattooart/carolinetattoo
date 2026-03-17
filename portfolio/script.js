@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  /* LENIS */
+  /* ── LENIS ── */
   var lenis = null;
   if (typeof Lenis !== 'undefined') {
     lenis = new Lenis({
@@ -18,92 +18,100 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { passive: true });
   }
 
-  /* HERO */
+  /* ── HERO ── */
   var hq = document.querySelector('.hero-q');
-  var hs = document.querySelector('.hero-s');
-  if (hq) hq.classList.add('show');
-  setTimeout(function() { if (hs) hs.classList.add('show'); }, 120);
+  if (hq) setTimeout(function() { hq.classList.add('show'); }, 50);
 
-  /* REVEAL CASES */
-  var cases = document.querySelectorAll('.case');
+  /* ── REVEAL CASES ── */
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
-  cases.forEach(function(c) { io.observe(c); });
+  document.querySelectorAll('.case').forEach(function(c) { io.observe(c); });
 
-  /* CAROUSEL */
+  /* ── CAROUSEL ── */
   var state = {};
-  var carousels = document.querySelectorAll('.carousel');
-  carousels.forEach(function(car) {
-    var id = car.id;
-    var slides = car.querySelectorAll('.sl');
-    state[id] = { slides: slides, cur: 0 };
-  });
-
   var cntMap = { c1: 'n1', c2: 'n2', c3: 'n3' };
 
+  document.querySelectorAll('.carousel').forEach(function(car) {
+    var id = car.id;
+    var slides = Array.from(car.querySelectorAll('.sl'));
+    state[id] = { slides: slides, cur: 0, busy: false };
+  });
+
+  function go(cid, dir) {
+    var s = state[cid];
+    if (!s || s.busy || s.slides.length < 2) return;
+    s.busy = true;
+
+    var oldIdx = s.cur;
+    s.cur = (s.cur + dir + s.slides.length) % s.slides.length;
+    var newIdx = s.cur;
+
+    s.slides[oldIdx].classList.add('out');
+
+    setTimeout(function() {
+      s.slides[oldIdx].classList.remove('active', 'out');
+      s.slides[newIdx].classList.add('active', 'in');
+      setTimeout(function() {
+        s.slides[newIdx].classList.remove('in');
+        s.busy = false;
+      }, 320);
+      var cntEl = document.getElementById(cntMap[cid]);
+      if (cntEl) cntEl.textContent = (newIdx + 1) + ' / ' + s.slides.length;
+    }, 260);
+  }
+
+  /* Buttons */
   document.querySelectorAll('.cb').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      var cid = btn.getAttribute('data-c');
-      var dir = parseInt(btn.getAttribute('data-d'));
-      var s = state[cid];
-      if (!s) return;
-      var old = s.cur;
-      s.cur = (s.cur + dir + s.slides.length) % s.slides.length;
-      var next = s.cur;
-      s.slides[old].classList.add('out');
-      setTimeout(function() {
-        s.slides[old].classList.remove('active', 'out');
-        s.slides[next].classList.add('active', 'in');
-        setTimeout(function() { s.slides[next].classList.remove('in'); }, 320);
-        var cntEl = document.getElementById(cntMap[cid]);
-        if (cntEl) cntEl.textContent = (next + 1) + ' / ' + s.slides.length;
-      }, 250);
+      go(btn.getAttribute('data-c'), parseInt(btn.getAttribute('data-d')));
     });
   });
 
-
-  /* SWIPE */
+  /* Swipe — one listener per carousel */
   document.querySelectorAll('.carousel').forEach(function(car) {
+    var cid  = car.id;
     var startX = 0;
-    var cid = car.id;
+    var startY = 0;
+    var tracking = false;
+
     car.addEventListener('touchstart', function(e) {
-      startX = e.touches[0].clientX;
+      startX   = e.touches[0].clientX;
+      startY   = e.touches[0].clientY;
+      tracking = true;
     }, { passive: true });
+
+    car.addEventListener('touchmove', function(e) {
+      if (!tracking) return;
+      var dx = Math.abs(e.touches[0].clientX - startX);
+      var dy = Math.abs(e.touches[0].clientY - startY);
+      /* If mostly horizontal swipe, prevent page scroll */
+      if (dx > dy && dx > 8) e.preventDefault();
+    }, { passive: false });
+
     car.addEventListener('touchend', function(e) {
+      if (!tracking) return;
+      tracking = false;
       var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) < 30) return;
-      var s = state[cid];
-      if (!s) return;
-      var old = s.cur;
-      var dir = diff > 0 ? 1 : -1;
-      s.cur = (s.cur + dir + s.slides.length) % s.slides.length;
-      var next = s.cur;
-      s.slides[old].classList.add('out');
-      setTimeout(function() {
-        s.slides[old].classList.remove('active', 'out');
-        s.slides[next].classList.add('active', 'in');
-        setTimeout(function() { s.slides[next].classList.remove('in'); }, 320);
-        var cntEl = document.getElementById(cntMap[cid]);
-        if (cntEl) cntEl.textContent = (next + 1) + ' / ' + s.slides.length;
-      }, 250);
+      if (Math.abs(diff) < 40) return;
+      go(cid, diff > 0 ? 1 : -1);
     }, { passive: true });
   });
 
-  /* LIGHTBOX */
-  var imgs = document.querySelectorAll('.sl img');
-  var lb   = document.getElementById('lb');
-  var lbi  = document.getElementById('lb-i');
-  var lbc  = document.getElementById('lb-c');
-  var idx  = 0;
+  /* ── LIGHTBOX ── */
+  var allImgs = Array.from(document.querySelectorAll('.sl img'));
+  var lb  = document.getElementById('lb');
+  var lbi = document.getElementById('lb-i');
+  var lbc = document.getElementById('lb-c');
+  var idx = 0;
 
-  imgs.forEach(function(img, i) {
+  allImgs.forEach(function(img, i) {
     img.addEventListener('click', function() {
-      idx = i;
+      idx     = i;
       lbi.src = img.src;
-      lbc.textContent = (i + 1) + ' / ' + imgs.length;
+      lbc.textContent = (i + 1) + ' / ' + allImgs.length;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
       if (lenis) lenis.stop();
@@ -116,9 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (lenis) lenis.start();
   }
   function lbGo(i) {
-    idx = (i + imgs.length) % imgs.length;
-    lbi.src = imgs[idx].src;
-    lbc.textContent = (idx + 1) + ' / ' + imgs.length;
+    idx = (i + allImgs.length) % allImgs.length;
+    lbi.src = allImgs[idx].src;
+    lbc.textContent = (idx + 1) + ' / ' + allImgs.length;
   }
 
   document.getElementById('lb-x').addEventListener('click', lbClose);
