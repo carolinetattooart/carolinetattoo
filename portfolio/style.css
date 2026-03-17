@@ -91,7 +91,7 @@ ul { list-style: none; }
 .ong-top { display: flex; align-items: center; gap: .85rem; margin-bottom: .35rem; }
 .ong-lbl { font-size: .63rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .ong-date { font-size: .63rem; color: #888; }
-.ong-body { font-size: .78rem; line-height: 1.65; }
+.ong-body { font-size: .8rem; line-height: 1.65; font-weight: 400; }
 
 /* ─ CASE ─ */
 .case {
@@ -115,12 +115,10 @@ ul { list-style: none; }
 .row {
   display: grid; grid-template-columns: 80px 1fr;
   gap: .5rem; padding: .6rem 0;
-  border-bottom: 1px solid rgba(0,0,0,.08);
   align-items: start;
 }
-.row:last-child { border-bottom: none; }
-.rl { font-size: .68rem; color: #888; padding-top: .08rem; line-height: 1.4; }
-.rr { font-size: .78rem; line-height: 1.6; }
+.rl { font-size: .7rem; color: #888; padding-top: .05rem; line-height: 1.45; font-weight: 400; }
+.rr { font-size: .8rem; line-height: 1.6; font-weight: 400; }
 
 /* NDA tag — exact Flavio: monospace look, border, no fill */
 .nda {
@@ -171,7 +169,7 @@ ul { list-style: none; }
 }
 .for-t sup { font-size: .52rem; color: #aaa; font-weight: 400; margin-left: .12rem; vertical-align: super; }
 .for-ul { display: flex; flex-direction: column; gap: .38rem; margin-bottom: 1.1rem; }
-.for-ul li { font-size: .78rem; line-height: 1.5; padding-left: .8rem; position: relative; }
+.for-ul li { font-size: .8rem; line-height: 1.5; padding-left: .8rem; position: relative; font-weight: 400; }
 .for-ul li::before { content: '·'; position: absolute; left: 0; color: #111; }
 .for-btn {
   display: inline-flex; align-items: center; gap: .3rem;
