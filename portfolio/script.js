@@ -64,6 +64,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+
+  /* SWIPE */
+  document.querySelectorAll('.carousel').forEach(function(car) {
+    var startX = 0;
+    var cid = car.id;
+    car.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    car.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) < 30) return;
+      var s = state[cid];
+      if (!s) return;
+      var old = s.cur;
+      var dir = diff > 0 ? 1 : -1;
+      s.cur = (s.cur + dir + s.slides.length) % s.slides.length;
+      var next = s.cur;
+      s.slides[old].classList.add('out');
+      setTimeout(function() {
+        s.slides[old].classList.remove('active', 'out');
+        s.slides[next].classList.add('active', 'in');
+        setTimeout(function() { s.slides[next].classList.remove('in'); }, 320);
+        var cntEl = document.getElementById(cntMap[cid]);
+        if (cntEl) cntEl.textContent = (next + 1) + ' / ' + s.slides.length;
+      }, 250);
+    }, { passive: true });
+  });
+
   /* LIGHTBOX */
   var imgs = document.querySelectorAll('.sl img');
   var lb   = document.getElementById('lb');
