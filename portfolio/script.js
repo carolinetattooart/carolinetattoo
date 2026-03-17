@@ -1,44 +1,39 @@
-/* ── NAV scroll ── */
+/* NAV */
 window.addEventListener('scroll', () => {
-  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-/* ── REVEAL — exact Flavio translateY(150px) → 0 ── */
-function init() {
-  document.querySelector('.hero-quote')?.classList.add('visible');
-  setTimeout(() => document.querySelector('.hero-current')?.classList.add('visible'), 120);
+/* REVEAL — translateY(150px) exact Flavio */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+}, { threshold: 0.04, rootMargin: '0px 0px -20px 0px' });
 
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.04, rootMargin: '0px 0px -20px 0px' });
+document.addEventListener('DOMContentLoaded', () => {
+  // Hero immediate
+  document.querySelector('.hero-quote')?.classList.add('in');
+  setTimeout(() => document.querySelector('.hero-current')?.classList.add('in'), 130);
+  // All other reveal elements
+  document.querySelectorAll('.js-reveal, .js-reveal-delay, .ongoing-card, .case, .for-section, .findme').forEach(el => obs.observe(el));
+});
 
-  document.querySelectorAll('.reveal-case').forEach(el => obs.observe(el));
-}
-
-/* ── LIGHTBOX ── */
-const allImgs  = document.querySelectorAll('.cimg img');
-const lightbox = document.getElementById('lightbox');
-const lbImg    = document.getElementById('lbImg');
-const lbInfo   = document.getElementById('lbInfo');
+/* LIGHTBOX */
+const imgs = document.querySelectorAll('.cimg img');
+const lb   = document.getElementById('lightbox');
+const lbI  = document.getElementById('lbImg');
+const lbTx = document.getElementById('lbInfo');
 let idx = 0;
 
-allImgs.forEach((img, i) => {
-  img.parentElement.addEventListener('click', () => { idx = i; show(); lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; });
-});
-function show() { lbImg.src = allImgs[idx].src; lbInfo.textContent = `${idx + 1} / ${allImgs.length}`; }
-function close() { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+imgs.forEach((img, i) => img.parentElement.addEventListener('click', () => { idx = i; show(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }));
+function show() { lbI.src = imgs[idx].src; lbTx.textContent = `${idx+1} / ${imgs.length}`; }
+function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
 
-document.getElementById('lbClose').addEventListener('click', close);
-lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-document.getElementById('lbPrev').addEventListener('click', () => { idx = (idx - 1 + allImgs.length) % allImgs.length; show(); });
-document.getElementById('lbNext').addEventListener('click', () => { idx = (idx + 1) % allImgs.length; show(); });
+document.getElementById('lbClose').onclick = close;
+lb.addEventListener('click', e => { if (e.target === lb) close(); });
+document.getElementById('lbPrev').onclick = () => { idx = (idx-1+imgs.length)%imgs.length; show(); };
+document.getElementById('lbNext').onclick = () => { idx = (idx+1)%imgs.length; show(); };
 document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape') close();
-  if (e.key === 'ArrowLeft')  { idx = (idx - 1 + allImgs.length) % allImgs.length; show(); }
-  if (e.key === 'ArrowRight') { idx = (idx + 1) % allImgs.length; show(); }
+  if (!lb.classList.contains('open')) return;
+  if (e.key==='Escape') close();
+  if (e.key==='ArrowLeft')  { idx=(idx-1+imgs.length)%imgs.length; show(); }
+  if (e.key==='ArrowRight') { idx=(idx+1)%imgs.length; show(); }
 });
-
-document.addEventListener('DOMContentLoaded', init);
