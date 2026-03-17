@@ -6,223 +6,262 @@
   <title>Caroline Tattoo — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- NAV — exact Flavio layout -->
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="../" class="nav-brand">
-        <div class="nav-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        <div class="nav-logo-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           Caroline Tattoo
         </div>
-        <span class="nav-version">Portfolio v1</span>
+        <span class="nav-badge">Portfolio v1</span>
       </a>
-      <div class="nav-links">
-        <a href="../" class="nav-link">About me</a>
-        <span class="nav-sep">|</span>
-        <a href="../#cita" class="nav-cta">Connect ↗</a>
+      <div class="nav-right">
+        <a href="../" class="nav-text-link">About me</a>
+        <span class="nav-pipe">|</span>
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="nav-btn-red">Instagram</a>
+        <span class="nav-pipe">|</span>
+        <a href="../#cita" class="nav-btn-dark">Connect ↗</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO — exact Flavio structure -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-img-wrap">
-      <img src="../img/portafolio/grises/IMG_9885.JPG" alt="Caroline" class="hero-img"/>
+    <div class="hero-photo-wrap">
+      <img src="../img/portafolio/grises/IMG_9885.JPG" alt="Caroline" class="hero-photo"/>
     </div>
-    <div class="hero-body">
-      <h1 class="hero-quote">"Blackwork and linework artist, <span class="hero-upper">CRAFTING PRECISE TATTOOS</span> and designs <span class="hero-upper">FOR BODIES AND STORIES</span> that <span class="hero-upper">LAST A LIFETIME."</span></h1>
-      <p class="hero-current">Currently working AS TATTOO ARTIST at <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="hero-studio">Ikigai Tatuajes</a>.</p>
-    </div>
+    <h1 class="hero-quote js-reveal">"BLACKWORK AND LINEWORK ARTIST, CRAFTING PRECISE AND MEANINGFUL TATTOOS FOR BODIES AND STORIES THAT LAST A LIFETIME."</h1>
+    <p class="hero-current js-reveal-delay">CURRENTLY WORKING AS TATTOO ARTIST AT <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="hero-link">Ikigai Tatuajes</a>.</p>
   </section>
 
-  <!-- ON-GOING / LABEL -->
-  <div class="section-label-row">
-    <span class="section-label">PORTFOLIO</span>
-    <span class="section-note">Last updated 2025</span>
+  <!-- ON-GOING PROJECTS card -->
+  <div class="ongoing-wrap">
+    <div class="ongoing-card js-reveal">
+      <div class="ongoing-header">
+        <span class="ongoing-label">ON-GOING PROJECTS</span>
+        <span class="ongoing-date">Last updated 2025</span>
+      </div>
+      <p class="ongoing-text">Building a tattoo portfolio and <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="ongoing-link">studio presence</a>, to bring custom blackwork and linework designs to clients in Viña del Mar — each piece designed from scratch, no flash sheets.</p>
+    </div>
   </div>
 
-  <!-- CASE 01: BLACKWORK -->
-  <article class="case reveal-case">
-    <div class="case-top">
-      <h2 class="case-name">Blackwork</h2>
-      <div class="case-tags">
-        <span class="tag">Solid ink</span>
-        <span class="tag">Dotwork</span>
-        <span class="tag">Dark contrast</span>
-      </div>
-    </div>
-    <div class="case-body">
+  <!-- CASE 01 -->
+  <article class="case js-reveal">
+    <div class="case-inner">
       <div class="case-left">
-        <div class="case-row">
-          <span class="row-label">Role</span>
-          <span class="row-val">Tattoo Artist &amp; Designer</span>
+        <div class="case-title-row">
+          <h2 class="case-title">BLACKWORK</h2>
+          <span class="case-co">Solid ink</span>
         </div>
-        <div class="case-row">
-          <span class="row-label">Team</span>
-          <div class="row-val">
-            Caroline (me) as tattoo artist<br/>
-            Ikigai Tatuajes as studio
+        <div class="case-rows">
+          <div class="crow">
+            <span class="crow-l">Role</span>
+            <span class="crow-r">Tattoo Artist &amp; Designer</span>
           </div>
-        </div>
-        <div class="case-row">
-          <span class="row-label">About</span>
-          <p class="row-val">Blackwork uses solid black ink to create dramatic, high-contrast designs. It is one of the most durable tattoo styles — black ink retains better than any color over time. Each piece is designed thinking about how it will age with the skin, ensuring clean, bold results that last.</p>
-        </div>
-        <div class="case-row">
-          <span class="row-label">Pieces</span>
-          <div class="row-val"><span class="tag tag--outline">10 works</span></div>
+          <div class="crow">
+            <span class="crow-l">Team</span>
+            <div class="crow-r">
+              Caroline (me) as tattoo artist<br/>
+              Ikigai Tatuajes as studio<br/>
+              Viña del Mar, Chile
+            </div>
+          </div>
+          <div class="crow">
+            <span class="crow-l">About</span>
+            <p class="crow-r">Blackwork uses solid black ink to create dramatic, high-contrast designs. It is one of the most durable tattoo styles — black retains better than any color over time. Each piece is designed thinking about how it will age with the skin, ensuring bold results that last a lifetime.</p>
+          </div>
+          <div class="crow">
+            <span class="crow-l">Results</span>
+            <div class="crow-r">
+              <span class="nda-tag">10 pieces completed</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="case-right">
-        <div class="case-imgs-main">
+        <div class="imgs-duo">
           <div class="cimg"><img src="../img/portafolio/grises/IMG_9058.JPG" loading="lazy" alt=""/></div>
           <div class="cimg"><img src="../img/portafolio/grises/IMG_9251.JPG" loading="lazy" alt=""/></div>
         </div>
-        <div class="case-imgs-grid">
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_9288.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_9471.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_8538.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_9698.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_9885.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_1212.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_1728.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/grises/IMG_4310.JPG" loading="lazy" alt=""/></div>
+        <div class="imgs-grid">
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_9288.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_9471.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_8538.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_9698.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_1212.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_1728.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_4310.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/grises/IMG_9885.JPG" loading="lazy" alt=""/></div>
         </div>
       </div>
     </div>
   </article>
 
-  <!-- CASE 02: LINEWORK -->
-  <article class="case reveal-case">
-    <div class="case-top">
-      <h2 class="case-name">Linework</h2>
-      <div class="case-tags">
-        <span class="tag">Fineline</span>
-        <span class="tag">Single needle</span>
-        <span class="tag">Precision</span>
-      </div>
-    </div>
-    <div class="case-body">
+  <!-- CASE 02 -->
+  <article class="case js-reveal">
+    <div class="case-inner">
       <div class="case-left">
-        <div class="case-row">
-          <span class="row-label">Role</span>
-          <span class="row-val">Tattoo Artist &amp; Designer</span>
+        <div class="case-title-row">
+          <h2 class="case-title">LINEWORK</h2>
+          <span class="case-co">Fineline</span>
         </div>
-        <div class="case-row">
-          <span class="row-label">Team</span>
-          <div class="row-val">
-            Caroline (me) as tattoo artist<br/>
-            Ikigai Tatuajes as studio
+        <div class="case-rows">
+          <div class="crow">
+            <span class="crow-l">Role</span>
+            <span class="crow-r">Tattoo Artist &amp; Designer</span>
           </div>
-        </div>
-        <div class="case-row">
-          <span class="row-label">About</span>
-          <p class="row-val">Linework takes fine line tattooing to the extreme. It requires a very precise hand and clean design — every line is intentional. The result is elegant, delicate and highly detailed. Single needle technique allows for thin lines that create intricate compositions impossible with standard needles.</p>
-        </div>
-        <div class="case-row">
-          <span class="row-label">Pieces</span>
-          <div class="row-val"><span class="tag tag--outline">14 works</span></div>
+          <div class="crow">
+            <span class="crow-l">Team</span>
+            <div class="crow-r">
+              Caroline (me) as tattoo artist<br/>
+              Ikigai Tatuajes as studio<br/>
+              Viña del Mar, Chile
+            </div>
+          </div>
+          <div class="crow">
+            <span class="crow-l">About</span>
+            <p class="crow-r">Linework takes fine line tattooing to the extreme. It requires a very precise hand and clean design — every line is intentional. Single needle technique allows for thin lines that create intricate compositions, delicate details and elegant results impossible with standard needles.</p>
+          </div>
+          <div class="crow">
+            <span class="crow-l">Results</span>
+            <div class="crow-r">
+              <span class="nda-tag">14 pieces completed</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="case-right">
-        <div class="case-imgs-main">
+        <div class="imgs-duo">
           <div class="cimg"><img src="../img/portafolio/linea/IMG_9241.JPG" loading="lazy" alt=""/></div>
           <div class="cimg"><img src="../img/portafolio/linea/IMG_9127.JPG" loading="lazy" alt=""/></div>
         </div>
-        <div class="case-imgs-grid">
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9033.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_1370.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_1374.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_1502.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_1690.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_8497.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9406.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9516.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9622.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9648.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9660.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/linea/IMG_9898.JPG" loading="lazy" alt=""/></div>
+        <div class="imgs-grid">
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9033.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_1370.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_1374.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_1502.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_1690.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_8497.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9406.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9516.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9622.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9648.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9660.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/linea/IMG_9898.JPG" loading="lazy" alt=""/></div>
         </div>
       </div>
     </div>
   </article>
 
-  <!-- CASE 03: ORNAMENTAL -->
-  <article class="case reveal-case">
-    <div class="case-top">
-      <h2 class="case-name">Ornamental</h2>
-      <div class="case-tags">
-        <span class="tag">Geometric</span>
-        <span class="tag">Floral</span>
-        <span class="tag">Symmetry</span>
-      </div>
-    </div>
-    <div class="case-body">
+  <!-- CASE 03 -->
+  <article class="case js-reveal">
+    <div class="case-inner">
       <div class="case-left">
-        <div class="case-row">
-          <span class="row-label">Role</span>
-          <span class="row-val">Tattoo Artist &amp; Designer</span>
+        <div class="case-title-row">
+          <h2 class="case-title">ORNAMENTAL</h2>
+          <span class="case-co">Geometric</span>
         </div>
-        <div class="case-row">
-          <span class="row-label">Team</span>
-          <div class="row-val">
-            Caroline (me) as tattoo artist<br/>
-            Ikigai Tatuajes as studio
+        <div class="case-rows">
+          <div class="crow">
+            <span class="crow-l">Role</span>
+            <span class="crow-r">Tattoo Artist &amp; Designer</span>
           </div>
-        </div>
-        <div class="case-row">
-          <span class="row-label">About</span>
-          <p class="row-val">Ornamental tattooing combines symmetry, patterns and geometry. Each piece works as an ornament that adapts to the body — always thinking about composition and how the design wraps and complements the anatomy. Inspired by jewelry, mandalas and architectural ornamentation.</p>
-        </div>
-        <div class="case-row">
-          <span class="row-label">Pieces</span>
-          <div class="row-val"><span class="tag tag--outline">9 works</span></div>
+          <div class="crow">
+            <span class="crow-l">Team</span>
+            <div class="crow-r">
+              Caroline (me) as tattoo artist<br/>
+              Ikigai Tatuajes as studio<br/>
+              Viña del Mar, Chile
+            </div>
+          </div>
+          <div class="crow">
+            <span class="crow-l">About</span>
+            <p class="crow-r">Ornamental tattooing combines symmetry, patterns and geometry. Each piece works as an ornament that adapts to the body — always thinking about composition and how the design wraps and complements the anatomy. Inspired by jewelry, mandalas and architectural ornamentation.</p>
+          </div>
+          <div class="crow">
+            <span class="crow-l">Results</span>
+            <div class="crow-r">
+              <span class="nda-tag">9 pieces completed</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="case-right">
-        <div class="case-imgs-main">
+        <div class="imgs-duo">
           <div class="cimg"><img src="../img/portafolio/color/IMG_9462.JPG" loading="lazy" alt=""/></div>
           <div class="cimg"><img src="../img/portafolio/color/IMG_9482.JPG" loading="lazy" alt=""/></div>
         </div>
-        <div class="case-imgs-grid">
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_9550.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_9564.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_9676.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_0008.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_0170.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_0798.JPG" loading="lazy" alt=""/></div>
-          <div class="cimg cimg--sq"><img src="../img/portafolio/color/IMG_5331.JPG" loading="lazy" alt=""/></div>
+        <div class="imgs-grid">
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_9550.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_9564.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_9676.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_0008.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_0170.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_0798.JPG" loading="lazy" alt=""/></div>
+          <div class="cimg sq"><img src="../img/portafolio/color/IMG_5331.JPG" loading="lazy" alt=""/></div>
         </div>
       </div>
     </div>
   </article>
 
-  <!-- MENTORSHIP-STYLE CTA SECTION — mirrors Flavio's bottom section -->
-  <section class="services reveal-case">
-    <div class="services-inner">
-      <div class="services-col">
-        <span class="services-for">for clients</span>
-        <ul class="services-list">
+  <!-- FOR CLIENTS / FOR STUDIOS — mirrors FOR DESIGNERS / FOR RECRUITERS -->
+  <section class="for-section js-reveal">
+    <div class="for-inner">
+      <div class="for-col">
+        <div class="for-title-row">
+          <span class="for-title">FOR CLIENTS</span>
+          <sup class="for-sup">↗</sup>
+        </div>
+        <ul class="for-list">
           <li>Custom tattoo design from scratch</li>
           <li>Blackwork and linework specialization</li>
           <li>Free consultation before booking</li>
           <li>Ornamental and geometric styles</li>
           <li>Touch-ups for pieces done with me</li>
         </ul>
-        <a href="../#cita" class="services-btn">Book a session</a>
+        <a href="../#cita" class="for-btn">Book a session 📅</a>
       </div>
-      <div class="services-col">
-        <span class="services-for">find me at</span>
-        <ul class="services-list services-list--contact">
-          <li><span class="contact-label">Instagram</span><a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener">@caroline_tattoo_art</a></li>
-          <li><span class="contact-label">Studio</span><a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" rel="noopener">@ikigai_tatuajes</a></li>
-          <li><span class="contact-label">Location</span><span>Viña del Mar, Chile</span></li>
+      <div class="for-col">
+        <div class="for-title-row">
+          <span class="for-title">FOR STUDIOS</span>
+          <sup class="for-sup">↗</sup>
+        </div>
+        <ul class="for-list">
+          <li>Guest spot collaborations welcome</li>
+          <li>Flash day participation available</li>
+          <li>Custom design projects from scratch</li>
+          <li>Clean, professional studio etiquette</li>
+          <li>Experienced in high-detail fineline work</li>
         </ul>
+        <a href="../#cita" class="for-btn">Schedule an intro ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIND ME AT -->
+  <section class="findme js-reveal">
+    <div class="findme-inner">
+      <div class="findme-left">
+        <span class="findme-title">FIND ME AT</span>
+      </div>
+      <div class="findme-right">
+        <a href="mailto:contacto@carolinetattoo.com" class="findme-email">contacto@carolinetattoo.com 📋</a>
+      </div>
+    </div>
+    <div class="findme-links">
+      <div class="findme-link-item">
+        <span class="findme-link-label">Instagram</span>
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="findme-link-val">@caroline_tattoo_art</a>
+      </div>
+      <div class="findme-link-item">
+        <span class="findme-link-label">Studio</span>
+        <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" rel="noopener" class="findme-link-val">@ikigai_tatuajes</a>
       </div>
     </div>
   </section>
@@ -231,17 +270,17 @@
   <footer class="footer">
     <div class="footer-inner">
       <span>caroline tattoo</span>
-      <span>product designer &amp; visual artist</span>
+      <span>tattoo artist &amp; designer</span>
     </div>
   </footer>
 
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
-    <button class="lb-close" id="lbClose">✕</button>
-    <button class="lb-prev" id="lbPrev">←</button>
-    <button class="lb-next" id="lbNext">→</button>
+    <button id="lbClose">✕</button>
+    <button id="lbPrev">←</button>
+    <button id="lbNext">→</button>
     <div class="lb-wrap"><img id="lbImg" src="" alt=""/></div>
-    <p class="lb-info" id="lbInfo"></p>
+    <p id="lbInfo"></p>
   </div>
 
   <script src="script.js"></script>
