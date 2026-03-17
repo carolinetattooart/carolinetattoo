@@ -4,10 +4,9 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portafolio — Caroline Tattoo</title>
-  <meta name="description" content="Portafolio de tatuajes. Blackwork, Linework y Ornamental. Viña del Mar, Chile."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist+Mono:wght@300;400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -16,235 +15,182 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="../" class="nav-logo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Caroline
+        <div class="nav-logo-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Caroline
+        </div>
+        <span class="nav-version">Portafolio</span>
       </a>
-      <div class="nav-center">
-        <span class="nav-tag">Portafolio</span>
+      <div class="nav-right">
+        <a href="../" class="nav-link">Inicio</a>
+        <a href="../#cita" class="nav-btn">Agendar <span>↗</span></a>
       </div>
-      <a href="../#cita" class="nav-cta">Agendar cita</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-meta">
-        <span class="badge badge--dot">Disponible</span>
-        <span class="badge">Viña del Mar, Chile</span>
-      </div>
-      <h1 class="hero-title">
-        Tatuajes<br/>
-        <em>hechos para</em><br/>
-        durar.
-      </h1>
-      <p class="hero-sub">Blackwork · Linework · Ornamental<br/>Diseños exclusivos desde Viña del Mar.</p>
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="../img/portafolio/grises/IMG_9885.JPG" alt="Caroline"/>
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-title">"BLACKWORK Y LINEWORK,<br/>DISEÑADO PARA<br/>DURAR TODA LA VIDA."</h1>
+      <p class="hero-sub">TATUADORA EN <em>VIÑA DEL MAR.</em></p>
     </div>
   </section>
 
-  <!-- WORK: BLACKWORK -->
-  <section class="work-section">
-    <div class="container">
-      <div class="work-card reveal-card" id="card-blackwork">
-        <div class="work-card-header">
-          <div class="work-card-meta">
-            <span class="work-tag">01 — Blackwork</span>
-            <h2 class="work-title">Tinta sólida.<br/>Contraste puro.</h2>
+  <!-- CASE: BLACKWORK -->
+  <section class="case reveal-case">
+    <div class="case-inner">
+      <div class="case-left">
+        <div class="case-title-row">
+          <h2 class="case-title">BLACKWORK</h2>
+          <span class="case-company">Solid ink</span>
+        </div>
+        <div class="case-meta">
+          <div class="meta-row">
+            <span class="meta-label">Estilo</span>
+            <span class="meta-val">Blackwork</span>
           </div>
-          <div class="work-card-info">
-            <div class="info-row">
-              <span class="info-label">Estilo</span>
-              <span class="info-val">Blackwork</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Técnica</span>
-              <span class="info-val">Solid fill, dotwork</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Piezas</span>
-              <span class="info-val">10 trabajos</span>
-            </div>
+          <div class="meta-row">
+            <span class="meta-label">Técnica</span>
+            <span class="meta-val">Solid fill, dotwork</span>
+          </div>
+          <div class="meta-row meta-row--block">
+            <span class="meta-label">Sobre el estilo</span>
+            <span class="meta-val">El blackwork usa tinta sólida negra para crear contrastes dramáticos. Es uno de los estilos más duraderos — el negro retiene mejor que cualquier color. Cada pieza se diseña pensando en cómo envejecerá con la piel.</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Piezas</span>
+            <div class="meta-tag">10 trabajos</div>
           </div>
         </div>
-        <div class="work-images">
-          <div class="work-img work-img--main">
-            <img src="../img/portafolio/grises/IMG_9058.JPG" alt="Blackwork" loading="lazy"/>
-          </div>
-          <div class="work-img-col">
-            <div class="work-img">
-              <img src="../img/portafolio/grises/IMG_9251.JPG" alt="Blackwork" loading="lazy"/>
-            </div>
-            <div class="work-img">
-              <img src="../img/portafolio/grises/IMG_9288.JPG" alt="Blackwork" loading="lazy"/>
-            </div>
-          </div>
+      </div>
+      <div class="case-right">
+        <div class="case-imgs">
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_9058.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_9251.JPG" loading="lazy" alt=""/></div>
         </div>
-        <div class="work-gallery">
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_9471.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_8538.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_9698.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_9885.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_1212.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_1728.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/grises/IMG_4310.JPG" alt="" loading="lazy"/></div>
-        </div>
-        <div class="work-card-footer">
-          <a href="../#cita" class="work-cta">Quiero uno así →</a>
+        <div class="case-imgs case-imgs--sm">
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_9288.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_9471.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_8538.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_9698.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_9885.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_1212.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_1728.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/grises/IMG_4310.JPG" loading="lazy" alt=""/></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WORK: LINEWORK -->
-  <section class="work-section">
-    <div class="container">
-      <div class="work-card reveal-card" id="card-linework">
-        <div class="work-card-header">
-          <div class="work-card-meta">
-            <span class="work-tag">02 — Linework</span>
-            <h2 class="work-title">Líneas finas.<br/>Detalle extremo.</h2>
+  <!-- CASE: LINEWORK -->
+  <section class="case reveal-case">
+    <div class="case-inner">
+      <div class="case-left">
+        <div class="case-title-row">
+          <h2 class="case-title">LINEWORK</h2>
+          <span class="case-company">Fineline</span>
+        </div>
+        <div class="case-meta">
+          <div class="meta-row">
+            <span class="meta-label">Estilo</span>
+            <span class="meta-val">Linework</span>
           </div>
-          <div class="work-card-info">
-            <div class="info-row">
-              <span class="info-label">Estilo</span>
-              <span class="info-val">Linework</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Técnica</span>
-              <span class="info-val">Fineline, single needle</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Piezas</span>
-              <span class="info-val">14 trabajos</span>
-            </div>
+          <div class="meta-row">
+            <span class="meta-label">Técnica</span>
+            <span class="meta-val">Single needle, fineline</span>
+          </div>
+          <div class="meta-row meta-row--block">
+            <span class="meta-label">Sobre el estilo</span>
+            <span class="meta-val">El linework lleva el trazo fino al extremo. Requiere mano muy precisa y diseño limpio — cada línea es intencionada. El resultado es elegante, delicado y de gran detalle.</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Piezas</span>
+            <div class="meta-tag">14 trabajos</div>
           </div>
         </div>
-        <div class="work-images">
-          <div class="work-img work-img--main">
-            <img src="../img/portafolio/linea/IMG_9241.JPG" alt="Linework" loading="lazy"/>
-          </div>
-          <div class="work-img-col">
-            <div class="work-img">
-              <img src="../img/portafolio/linea/IMG_9127.JPG" alt="Linework" loading="lazy"/>
-            </div>
-            <div class="work-img">
-              <img src="../img/portafolio/linea/IMG_9033.JPG" alt="Linework" loading="lazy"/>
-            </div>
-          </div>
+      </div>
+      <div class="case-right">
+        <div class="case-imgs">
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9241.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9127.JPG" loading="lazy" alt=""/></div>
         </div>
-        <div class="work-gallery">
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_1370.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_1374.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_1502.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_1690.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_8497.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_9406.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_9516.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_9622.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_9648.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_9660.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/linea/IMG_9898.JPG" alt="" loading="lazy"/></div>
-        </div>
-        <div class="work-card-footer">
-          <a href="../#cita" class="work-cta">Quiero uno así →</a>
+        <div class="case-imgs case-imgs--sm">
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9033.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_1370.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_1374.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_1502.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_1690.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_8497.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9406.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9516.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9622.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9648.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9660.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/linea/IMG_9898.JPG" loading="lazy" alt=""/></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WORK: ORNAMENTAL -->
-  <section class="work-section">
-    <div class="container">
-      <div class="work-card reveal-card" id="card-ornamental">
-        <div class="work-card-header">
-          <div class="work-card-meta">
-            <span class="work-tag">03 — Ornamental</span>
-            <h2 class="work-title">Patrones y simetría.<br/>Composición total.</h2>
+  <!-- CASE: ORNAMENTAL -->
+  <section class="case reveal-case">
+    <div class="case-inner">
+      <div class="case-left">
+        <div class="case-title-row">
+          <h2 class="case-title">ORNAMENTAL</h2>
+          <span class="case-company">Geometric</span>
+        </div>
+        <div class="case-meta">
+          <div class="meta-row">
+            <span class="meta-label">Estilo</span>
+            <span class="meta-val">Ornamental</span>
           </div>
-          <div class="work-card-info">
-            <div class="info-row">
-              <span class="info-label">Estilo</span>
-              <span class="info-val">Ornamental</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Técnica</span>
-              <span class="info-val">Geométrico, floral</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Piezas</span>
-              <span class="info-val">9 trabajos</span>
-            </div>
+          <div class="meta-row">
+            <span class="meta-label">Técnica</span>
+            <span class="meta-val">Geométrico, floral</span>
+          </div>
+          <div class="meta-row meta-row--block">
+            <span class="meta-label">Sobre el estilo</span>
+            <span class="meta-val">El ornamental combina simetría, patrones y geometría. Las piezas funcionan como ornamentos que se adaptan al cuerpo — siempre pensando en la composición y cómo el diseño rodea y complementa la anatomía.</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Piezas</span>
+            <div class="meta-tag">9 trabajos</div>
           </div>
         </div>
-        <div class="work-images">
-          <div class="work-img work-img--main">
-            <img src="../img/portafolio/color/IMG_9462.JPG" alt="Ornamental" loading="lazy"/>
-          </div>
-          <div class="work-img-col">
-            <div class="work-img">
-              <img src="../img/portafolio/color/IMG_9482.JPG" alt="Ornamental" loading="lazy"/>
-            </div>
-            <div class="work-img">
-              <img src="../img/portafolio/color/IMG_9550.JPG" alt="Ornamental" loading="lazy"/>
-            </div>
-          </div>
+      </div>
+      <div class="case-right">
+        <div class="case-imgs">
+          <div class="case-img"><img src="../img/portafolio/color/IMG_9462.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_9482.JPG" loading="lazy" alt=""/></div>
         </div>
-        <div class="work-gallery">
-          <div class="work-img"><img src="../img/portafolio/color/IMG_9564.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/color/IMG_9676.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/color/IMG_0008.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/color/IMG_0170.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/color/IMG_0798.JPG" alt="" loading="lazy"/></div>
-          <div class="work-img"><img src="../img/portafolio/color/IMG_5331.JPG" alt="" loading="lazy"/></div>
-        </div>
-        <div class="work-card-footer">
-          <a href="../#cita" class="work-cta">Quiero uno así →</a>
+        <div class="case-imgs case-imgs--sm">
+          <div class="case-img"><img src="../img/portafolio/color/IMG_9550.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_9564.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_9676.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_0008.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_0170.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_0798.JPG" loading="lazy" alt=""/></div>
+          <div class="case-img"><img src="../img/portafolio/color/IMG_5331.JPG" loading="lazy" alt=""/></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT / CTA -->
-  <section class="about-section">
-    <div class="container">
-      <div class="about-card reveal-card">
-        <div class="about-left">
-          <span class="work-tag">Sobre mí</span>
-          <h2 class="about-title">Diseño hecho<br/><em>con intención.</em></h2>
-          <p class="about-text">Soy Caroline, tatuadora con base en Viña del Mar. Me especializo en blackwork, linework y ornamental — piezas limpias, precisas y diseñadas para durar.</p>
-          <p class="about-text">Cada tatuaje parte de una consulta. Me interesa entender lo que buscas y encontrar la forma de llevarlo a la piel de manera que te represente.</p>
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-num">3+</span>
-              <span class="stat-label">Años tatuando</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">300+</span>
-              <span class="stat-label">Piezas realizadas</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">100%</span>
-              <span class="stat-label">Diseño propio</span>
-            </div>
-          </div>
-          <div class="about-actions">
-            <a href="../#cita" class="btn-primary">Agendar cita →</a>
-            <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-ghost">Instagram ↗</a>
-          </div>
-        </div>
-        <div class="about-img">
-          <img src="../img/portafolio/grises/IMG_9058.JPG" alt="Caroline Tattoo"/>
-        </div>
-      </div>
-    </div>
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <p class="footer-cta-text">"¿Tienes una idea? Hablemos."</p>
+    <a href="../#cita" class="footer-cta-btn">Agendar cita <span>↗</span></a>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">Caroline Tattoo</span>
-      <span class="footer-loc">Viña del Mar, Chile</span>
-      <span class="footer-copy">© 2025</span>
+    <div class="footer-inner">
+      <span>Caroline Tattoo</span>
+      <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener">@caroline_tattoo_art ↗</a>
+      <span>Viña del Mar © 2025</span>
     </div>
   </footer>
 
