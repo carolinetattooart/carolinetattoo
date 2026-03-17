@@ -1,7 +1,7 @@
 /* ─ RESET ─ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; }
-body { background: #faf4eb; color: #111; font-family: 'Instrument Sans', sans-serif; font-size: 13px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { background: #fff7ed; color: #111; font-family: 'Instrument Sans', sans-serif; font-size: 13px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
 button { border: none; background: none; cursor: pointer; font: inherit; }
 ul { list-style: none; }
@@ -13,7 +13,7 @@ ul { list-style: none; }
   border-bottom: 1px solid transparent;
   transition: background .25s, border-color .25s;
 }
-#nav.on { background: rgba(250,244,235,.95); backdrop-filter: blur(16px); border-color: rgba(0,0,0,.08); }
+#nav.on { background: rgba(255,247,237,.95); backdrop-filter: blur(16px); border-color: rgba(0,0,0,.08); }
 .nav-inner { max-width: 980px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 
 /* left side */
