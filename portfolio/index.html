@@ -6,201 +6,211 @@
   <title>Carolina Pizarro — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <nav class="nav" id="nav">
+  <!-- NAV: pill + badge | About me | red btn | | | dark btn -->
+  <nav id="nav">
     <div class="nav-inner">
-      <a href="../" class="nav-brand">
+      <a href="../" class="nav-left">
         <div class="nav-pill">
-          <svg width="11" height="11" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="10" cy="10" r="8"/><path d="M10 6v4M10 14v.5"/></svg>
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="white" stroke-width="1.5"/><path d="M8 5v3M8 11v.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
           Carolina Pizarro
         </div>
         <span class="nav-badge">Portfolio v1</span>
       </a>
       <div class="nav-right">
-        <a href="../" class="nav-link-plain">About me</a>
-        <span class="nav-sep">|</span>
-        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="nav-btn-red">Instagram</a>
-        <span class="nav-sep">|</span>
-        <a href="../#cita" class="nav-btn-dark">Connect ↗</a>
+        <a href="../" class="nav-plain">Sobre mí</a>
+        <span class="nav-pipe">|</span>
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="nav-red">Instagram</a>
+        <span class="nav-pipe">|</span>
+        <a href="../#cita" class="nav-dark">Contactar ↗</a>
       </div>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-pic-wrap">
-      <img src="../img/portafolio/grises/IMG_9885.JPG" alt="Carolina Pizarro" class="hero-pic"/>
+    <div class="hero-img-box">
+      <img src="../img/portafolio/grises/IMG_9885.JPG" alt="Carolina Pizarro"/>
     </div>
-    <h1 class="hero-quote">"TATTOO ARTIST BASED IN VIÑA DEL MAR, CRAFTING PRECISE AND MEANINGFUL DESIGNS FOR BODIES AND STORIES THAT LAST A LIFETIME."</h1>
-    <p class="hero-sub">CURRENTLY WORKING AS TATTOO ARTIST AT <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="link-red">Ikigai Tatuajes</a>.</p>
+    <h1 class="hero-q">"TATUADORA CON BASE EN VIÑA DEL MAR, CREANDO DISEÑOS PRECISOS Y ÚNICOS PARA CUERPOS E HISTORIAS QUE DURAN TODA LA VIDA."</h1>
+    <p class="hero-s">ACTUALMENTE TATUANDO EN <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="rlink">Ikigai Tatuajes</a>.</p>
   </section>
 
-  <div class="ong-outer">
+  <!-- ONGOING CARD -->
+  <div class="ong">
     <div class="ong-card">
-      <div class="ong-header">
-        <span class="ong-title">ON-GOING PROJECTS</span>
-        <span class="ong-date">Last updated 2025</span>
+      <div class="ong-top">
+        <span class="ong-lbl">PROYECTOS EN CURSO</span>
+        <span class="ong-date">Última actualización 2025</span>
       </div>
-      <p class="ong-text">Building a personal portfolio and studio presence at <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="link-red">Ikigai Tatuajes</a>, to bring custom designs to clients in Viña del Mar — each piece designed from scratch, no flash sheets, no templates.</p>
+      <p class="ong-body">Construyendo un portfolio personal en <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="rlink">Ikigai Tatuajes</a>, para llevar diseños personalizados a clientes en Viña del Mar — cada pieza diseñada desde cero, sin plantillas prediseñadas.</p>
     </div>
   </div>
 
-  <!-- LÍNEAS -->
+  <!-- CASE 1: LÍNEAS -->
   <article class="case" id="lineas">
     <div class="case-inner">
-      <div class="case-left">
-        <div class="case-head-row">
-          <span class="case-name">LÍNEAS</span>
-          <span class="case-tag">Fineline</span>
+      <div class="cl">
+        <div class="case-top">
+          <span class="case-title">LÍNEAS</span>
+          <span class="case-sub">Fineline</span>
         </div>
-        <div class="meta-rows">
-          <div class="mrow"><span class="ml">Role</span><span class="mr">Tattoo Artist &amp; Designer</span></div>
-          <div class="mrow"><span class="ml">Team</span><div class="mr">Carolina (me) as tattoo artist<br/>Ikigai Tatuajes as studio<br/>Viña del Mar, Chile</div></div>
-          <div class="mrow"><span class="ml">About</span><p class="mr">Linework takes fine line tattooing to the extreme. Every line is intentional. Single needle technique allows for thin, intricate compositions and delicate details impossible with standard needles.</p></div>
-          <div class="mrow"><span class="ml">Results</span><div class="mr"><span class="nda-tag">14 pieces completed</span></div></div>
+        <div class="rows">
+          <div class="row"><span class="rl">Rol</span><span class="rr">Tatuadora y diseñadora</span></div>
+          <div class="row"><span class="rl">Equipo</span><div class="rr">Carolina (yo) como tatuadora<br>Ikigai Tatuajes como estudio<br>Viña del Mar, Chile</div></div>
+          <div class="row"><span class="rl">Descripción</span><p class="rr">El linework lleva el trazo fino al extremo. Cada línea es intencional. La técnica de aguja única permite crear composiciones intrincadas y detalles delicados imposibles con agujas estándar.</p></div>
+          <div class="row"><span class="rl">Trabajos</span><div class="rr"><span class="nda">14 piezas realizadas</span></div></div>
         </div>
       </div>
-      <div class="case-right">
-        <div class="carousel" id="car-lineas">
-          <div class="slide active"><img src="../img/portafolio/linea/IMG_9241.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9127.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/linea/IMG_9033.JPG" alt=""/><img src="../img/portafolio/linea/IMG_1370.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/linea/IMG_1374.JPG" alt=""/><img src="../img/portafolio/linea/IMG_1502.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/linea/IMG_1690.JPG" alt=""/><img src="../img/portafolio/linea/IMG_8497.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/linea/IMG_9406.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9516.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/linea/IMG_9622.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9660.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/linea/IMG_9648.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9898.JPG" alt=""/></div>
+      <div class="cr">
+        <div class="carousel" id="c1">
+          <div class="sl active"><img src="../img/portafolio/linea/IMG_9241.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9127.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/linea/IMG_9033.JPG" alt=""/><img src="../img/portafolio/linea/IMG_1370.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/linea/IMG_1374.JPG" alt=""/><img src="../img/portafolio/linea/IMG_1502.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/linea/IMG_1690.JPG" alt=""/><img src="../img/portafolio/linea/IMG_8497.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/linea/IMG_9406.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9516.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/linea/IMG_9622.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9660.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/linea/IMG_9648.JPG" alt=""/><img src="../img/portafolio/linea/IMG_9898.JPG" alt=""/></div>
         </div>
-        <div class="car-controls">
-          <button class="car-btn" data-car="car-lineas" data-dir="-1">←</button>
-          <span class="car-count" id="cnt-lineas">1 / 7</span>
-          <button class="car-btn" data-car="car-lineas" data-dir="1">→</button>
+        <div class="cc">
+          <button class="cb" data-c="c1" data-d="-1">←</button>
+          <span class="cn" id="n1">1 / 7</span>
+          <button class="cb" data-c="c1" data-d="1">→</button>
         </div>
       </div>
     </div>
   </article>
 
-  <!-- COLOR -->
+  <!-- CASE 2: COLOR -->
   <article class="case" id="color">
     <div class="case-inner">
-      <div class="case-left">
-        <div class="case-head-row">
-          <span class="case-name">COLOR</span>
-          <span class="case-tag">Ornamental</span>
+      <div class="cl">
+        <div class="case-top">
+          <span class="case-title">COLOR</span>
+          <span class="case-sub">Ornamental</span>
         </div>
-        <div class="meta-rows">
-          <div class="mrow"><span class="ml">Role</span><span class="mr">Tattoo Artist &amp; Designer</span></div>
-          <div class="mrow"><span class="ml">Team</span><div class="mr">Carolina (me) as tattoo artist<br/>Ikigai Tatuajes as studio<br/>Viña del Mar, Chile</div></div>
-          <div class="mrow"><span class="ml">About</span><p class="mr">Ornamental tattooing combines symmetry, patterns and geometry with color. Each piece adapts to the body — always thinking about composition and how the design wraps the anatomy.</p></div>
-          <div class="mrow"><span class="ml">Results</span><div class="mr"><span class="nda-tag">9 pieces completed</span></div></div>
+        <div class="rows">
+          <div class="row"><span class="rl">Rol</span><span class="rr">Tatuadora y diseñadora</span></div>
+          <div class="row"><span class="rl">Equipo</span><div class="rr">Carolina (yo) como tatuadora<br>Ikigai Tatuajes como estudio<br>Viña del Mar, Chile</div></div>
+          <div class="row"><span class="rl">Descripción</span><p class="rr">El ornamental combina simetría, patrones y geometría con color. Cada pieza se adapta al cuerpo — siempre pensando en la composición y cómo el diseño envuelve y complementa la anatomía.</p></div>
+          <div class="row"><span class="rl">Trabajos</span><div class="rr"><span class="nda">9 piezas realizadas</span></div></div>
         </div>
       </div>
-      <div class="case-right">
-        <div class="carousel" id="car-color">
-          <div class="slide active"><img src="../img/portafolio/color/IMG_9462.JPG" alt=""/><img src="../img/portafolio/color/IMG_9482.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/color/IMG_9550.JPG" alt=""/><img src="../img/portafolio/color/IMG_9564.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/color/IMG_9676.JPG" alt=""/><img src="../img/portafolio/color/IMG_0008.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/color/IMG_0170.JPG" alt=""/><img src="../img/portafolio/color/IMG_0798.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/color/IMG_5331.JPG" alt=""/><img src="../img/portafolio/color/IMG_9462.JPG" alt=""/></div>
+      <div class="cr">
+        <div class="carousel" id="c2">
+          <div class="sl active"><img src="../img/portafolio/color/IMG_9462.JPG" alt=""/><img src="../img/portafolio/color/IMG_9482.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/color/IMG_9550.JPG" alt=""/><img src="../img/portafolio/color/IMG_9564.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/color/IMG_9676.JPG" alt=""/><img src="../img/portafolio/color/IMG_0008.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/color/IMG_0170.JPG" alt=""/><img src="../img/portafolio/color/IMG_0798.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/color/IMG_5331.JPG" alt=""/><img src="../img/portafolio/color/IMG_9462.JPG" alt=""/></div>
         </div>
-        <div class="car-controls">
-          <button class="car-btn" data-car="car-color" data-dir="-1">←</button>
-          <span class="car-count" id="cnt-color">1 / 5</span>
-          <button class="car-btn" data-car="car-color" data-dir="1">→</button>
+        <div class="cc">
+          <button class="cb" data-c="c2" data-d="-1">←</button>
+          <span class="cn" id="n2">1 / 5</span>
+          <button class="cb" data-c="c2" data-d="1">→</button>
         </div>
       </div>
     </div>
   </article>
 
-  <!-- SOMBRAS -->
+  <!-- CASE 3: SOMBRAS -->
   <article class="case" id="sombras">
     <div class="case-inner">
-      <div class="case-left">
-        <div class="case-head-row">
-          <span class="case-name">SOMBRAS</span>
-          <span class="case-tag">Blackwork</span>
+      <div class="cl">
+        <div class="case-top">
+          <span class="case-title">SOMBRAS</span>
+          <span class="case-sub">Blackwork</span>
         </div>
-        <div class="meta-rows">
-          <div class="mrow"><span class="ml">Role</span><span class="mr">Tattoo Artist &amp; Designer</span></div>
-          <div class="mrow"><span class="ml">Team</span><div class="mr">Carolina (me) as tattoo artist<br/>Ikigai Tatuajes as studio<br/>Viña del Mar, Chile</div></div>
-          <div class="mrow"><span class="ml">About</span><p class="mr">Shading and solid black ink to create dramatic, high-contrast designs. One of the most durable tattoo styles — black retains better than any color over time. Each piece is designed thinking about how it will age with the skin.</p></div>
-          <div class="mrow"><span class="ml">Results</span><div class="mr"><span class="nda-tag">10 pieces completed</span></div></div>
+        <div class="rows">
+          <div class="row"><span class="rl">Rol</span><span class="rr">Tatuadora y diseñadora</span></div>
+          <div class="row"><span class="rl">Equipo</span><div class="rr">Carolina (yo) como tatuadora<br>Ikigai Tatuajes como estudio<br>Viña del Mar, Chile</div></div>
+          <div class="row"><span class="rl">Descripción</span><p class="rr">Tinta negra sólida y sombreado para crear diseños dramáticos de alto contraste. Uno de los estilos más duraderos — el negro retiene mejor que cualquier color con el tiempo.</p></div>
+          <div class="row"><span class="rl">Trabajos</span><div class="rr"><span class="nda">10 piezas realizadas</span></div></div>
         </div>
       </div>
-      <div class="case-right">
-        <div class="carousel" id="car-sombras">
-          <div class="slide active"><img src="../img/portafolio/grises/IMG_9058.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9251.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/grises/IMG_9288.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9471.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/grises/IMG_8538.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9698.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/grises/IMG_1212.JPG" alt=""/><img src="../img/portafolio/grises/IMG_1728.JPG" alt=""/></div>
-          <div class="slide"><img src="../img/portafolio/grises/IMG_4310.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9885.JPG" alt=""/></div>
+      <div class="cr">
+        <div class="carousel" id="c3">
+          <div class="sl active"><img src="../img/portafolio/grises/IMG_9058.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9251.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/grises/IMG_9288.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9471.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/grises/IMG_8538.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9698.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/grises/IMG_1212.JPG" alt=""/><img src="../img/portafolio/grises/IMG_1728.JPG" alt=""/></div>
+          <div class="sl"><img src="../img/portafolio/grises/IMG_4310.JPG" alt=""/><img src="../img/portafolio/grises/IMG_9885.JPG" alt=""/></div>
         </div>
-        <div class="car-controls">
-          <button class="car-btn" data-car="car-sombras" data-dir="-1">←</button>
-          <span class="car-count" id="cnt-sombras">1 / 5</span>
-          <button class="car-btn" data-car="car-sombras" data-dir="1">→</button>
+        <div class="cc">
+          <button class="cb" data-c="c3" data-d="-1">←</button>
+          <span class="cn" id="n3">1 / 5</span>
+          <button class="cb" data-c="c3" data-d="1">→</button>
         </div>
       </div>
     </div>
   </article>
 
-  <!-- FOR SECTION -->
-  <section class="for-section">
+  <!-- FOR CLIENTS / FOR STUDIOS — exact Flavio layout -->
+  <section class="for-sec">
     <div class="for-inner">
       <div class="for-col">
-        <p class="for-title">FOR CLIENTS <sup>01</sup></p>
-        <ul class="for-list">
-          <li>Custom tattoo design from scratch</li>
-          <li>Líneas, color and sombras specialization</li>
-          <li>Free consultation before booking</li>
-          <li>Ornamental and geometric styles</li>
-          <li>Touch-ups for pieces done with me</li>
+        <p class="for-t">PARA CLIENTES <sup>01</sup></p>
+        <ul class="for-ul">
+          <li>Diseño de tatuaje personalizado desde cero</li>
+          <li>Especialización en líneas, color y sombras</li>
+          <li>Consulta gratuita antes de reservar</li>
+          <li>Estilos ornamentales y geométricos</li>
+          <li>Retoques para piezas realizadas conmigo</li>
         </ul>
-        <a href="../#cita" class="for-btn">Book a session 📅</a>
+        <a href="../#cita" class="for-btn">Reservar sesión 📅</a>
       </div>
       <div class="for-col">
-        <p class="for-title">FOR STUDIOS <sup>02</sup></p>
-        <ul class="for-list">
-          <li>Guest spot collaborations welcome</li>
-          <li>Flash day participation available</li>
-          <li>Custom design projects from scratch</li>
-          <li>Clean, professional studio etiquette</li>
-          <li>Experienced in high-detail fineline work</li>
+        <p class="for-t">PARA ESTUDIOS <sup>02</sup></p>
+        <ul class="for-ul">
+          <li>Colaboraciones como artista invitada</li>
+          <li>Participación en flash days disponible</li>
+          <li>Proyectos de diseño personalizados</li>
+          <li>Etiqueta profesional en estudio</li>
+          <li>Experiencia en trabajo fineline de alto detalle</li>
         </ul>
-        <a href="../#cita" class="for-btn">Schedule an intro call 📅</a>
+        <a href="../#cita" class="for-btn">Agendar llamada 📅</a>
       </div>
     </div>
   </section>
 
-  <!-- FIND ME AT -->
-  <section class="find-section">
+  <!-- FIND ME AT — exact Flavio layout -->
+  <section class="find-sec">
     <div class="find-top">
-      <span class="find-title">FIND ME AT</span>
-      <a href="mailto:contacto@carolinetattoo.com" class="find-email">contacto@carolinetattoo.com 📋</a>
+      <span class="find-t">ENCUÉNTRAME EN</span>
+      <a href="mailto:hola@carolinapizarro.com" class="find-email">hola@carolinapizarro.com 📋</a>
     </div>
     <div class="find-links">
-      <div class="find-item"><span class="find-label">Instagram</span><a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="find-val">@caroline_tattoo_art</a></div>
-      <div class="find-item"><span class="find-label">Studio</span><a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="find-val">@ikigai_tatuajes</a></div>
+      <div class="find-item">
+        <span class="find-lbl">Instagram</span>
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="find-val">@caroline_tattoo_art</a>
+      </div>
+      <div class="find-item">
+        <span class="find-lbl">Estudio</span>
+        <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="find-val">@ikigai_tatuajes</a>
+      </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <span>carolina pizarro</span>
-      <span>tattoo artist &amp; designer</span>
+      <span>tatuadora &amp; diseñadora</span>
     </div>
   </footer>
 
   <!-- LIGHTBOX -->
-  <div id="lightbox">
-    <button id="lb-close">✕</button>
-    <button id="lb-prev">←</button>
-    <button id="lb-next">→</button>
-    <div id="lb-wrap"><img id="lb-img" src="" alt=""/></div>
-    <p id="lb-info"></p>
+  <div id="lb">
+    <button id="lb-x">✕</button>
+    <button id="lb-p">←</button>
+    <button id="lb-n">→</button>
+    <div id="lb-box"><img id="lb-i" src="" alt=""/></div>
+    <p id="lb-c"></p>
   </div>
 
   <script src="script.js"></script>
