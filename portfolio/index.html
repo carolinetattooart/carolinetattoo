@@ -4,14 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio — Caroline Tattoo</title>
-  <meta name="description" content="Portafolio de tatuajes — Blackwork, Linework, Ornamental. Viña del Mar." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@700;800&family=Spline+Sans+Mono:wght@300;400&display=swap" rel="stylesheet" />
-  <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- Lenis smooth scroll -->
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -19,265 +16,160 @@
 
   <!-- PRELOADER -->
   <div class="preloader" id="preloader">
-    <div class="pre-counter" id="preCounter">0</div>
-    <div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+    <span class="pre-word" id="preWord">Caroline</span>
+    <div class="pre-line"><div class="pre-fill" id="preFill"></div></div>
   </div>
 
   <!-- CURSOR -->
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- HEADER -->
   <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="../" class="header__back link-hover">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    <div class="hd">
+      <a href="../" class="hd-back">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         Caroline
       </a>
-      <span class="header__title">Portafolio</span>
-      <a href="../#cita" class="header__cta link-hover">Agendar →</a>
+      <span class="hd-name">Portafolio</span>
+      <a href="../#cita" class="hd-cta">Agendar →</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <div class="hero__labels">
-        <span class="label-pill">● Viña del Mar</span>
-        <span class="label-pill" id="totalCount">33 trabajos</span>
+    <div class="wrap">
+      <p class="hero-eyebrow">
+        <span class="dot"></span>Viña del Mar, Chile
+        <span class="eyebrow-count" id="totalCount">— 33 trabajos</span>
+      </p>
+      <h1 class="hero-title anim-title">PORTAFOLIO</h1>
+    </div>
+  </section>
+
+  <!-- CATEGORY: BLACKWORK -->
+  <section class="cat-section" id="cat-blackwork">
+    <div class="wrap">
+      <div class="cat-header">
+        <div class="cat-header-left">
+          <span class="cat-num">01</span>
+          <h2 class="cat-title anim-title">BLACKWORK</h2>
+        </div>
+        <p class="cat-desc">Tinta sólida, contraste extremo.<br>Formas precisas para durar.</p>
       </div>
-      <h1 class="hero__title animation-title">PORTAFOLIO</h1>
-      <div class="hero__sub">
-        <span class="hero__sub-line">Blackwork</span>
-        <span class="sep">·</span>
-        <span class="hero__sub-line">Linework</span>
-        <span class="sep">·</span>
-        <span class="hero__sub-line">Ornamental</span>
+      <div class="cat-grid" id="grid-blackwork">
+        <div class="ci ci--lg"><div class="ci-img"><img src="../img/portafolio/grises/IMG_9058.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_9251.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_9288.JPG" loading="lazy"/></div></div>
+        <div class="ci ci--wide"><div class="ci-img"><img src="../img/portafolio/grises/IMG_8538.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_9471.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_9698.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_9885.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_1212.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_1728.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/grises/IMG_4310.JPG" loading="lazy"/></div></div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span>Blackwork</span><em>·</em><span>Linework</span><em>·</em><span>Ornamental</span><em>·</em><span>Fineline</span><em>·</em><span>Diseño propio</span><em>·</em>
-      <span>Blackwork</span><em>·</em><span>Linework</span><em>·</em><span>Ornamental</span><em>·</em><span>Fineline</span><em>·</em><span>Diseño propio</span><em>·</em>
+  <!-- DIVIDER -->
+  <div class="cat-divider">
+    <div class="wrap divider-inner">
+      <span>Blackwork</span>
+      <div class="divider-line"></div>
+      <span>Linework</span>
     </div>
   </div>
 
-  <!-- GALLERY -->
-  <section class="gallery">
-    <div class="container">
-      <!-- FILTERS -->
-      <div class="filters-bar">
-        <div class="filters">
-          <button class="filter-btn active" data-cat="all">Todo</button>
-          <button class="filter-btn" data-cat="blackwork">Blackwork</button>
-          <button class="filter-btn" data-cat="linework">Linework</button>
-          <button class="filter-btn" data-cat="ornamental">Ornamental</button>
+  <!-- CATEGORY: LINEWORK -->
+  <section class="cat-section" id="cat-linework">
+    <div class="wrap">
+      <div class="cat-header cat-header--right">
+        <p class="cat-desc">Líneas finas, detalle extremo.<br>Pureza de trazo.</p>
+        <div class="cat-header-left">
+          <span class="cat-num">02</span>
+          <h2 class="cat-title anim-title">LINEWORK</h2>
         </div>
-        <span class="filter-count" id="filterCount">33 piezas</span>
       </div>
+      <div class="cat-grid cat-grid--alt" id="grid-linework">
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9241.JPG" loading="lazy"/></div></div>
+        <div class="ci ci--lg"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9127.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_1370.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9033.JPG" loading="lazy"/></div></div>
+        <div class="ci ci--wide"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9660.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_1374.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_1502.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_1690.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_8497.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9406.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9516.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9622.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9648.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/linea/IMG_9898.JPG" loading="lazy"/></div></div>
+      </div>
+    </div>
+  </section>
 
-      <!-- GRID -->
-      <div class="gallery__grid" id="galleryGrid">
+  <!-- DIVIDER -->
+  <div class="cat-divider">
+    <div class="wrap divider-inner">
+      <span>Linework</span>
+      <div class="divider-line"></div>
+      <span>Ornamental</span>
+    </div>
+  </div>
 
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_9058.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">01</span></div>
+  <!-- CATEGORY: ORNAMENTAL -->
+  <section class="cat-section" id="cat-ornamental">
+    <div class="wrap">
+      <div class="cat-header">
+        <div class="cat-header-left">
+          <span class="cat-num">03</span>
+          <h2 class="cat-title anim-title">ORNAMENTAL</h2>
         </div>
-
-        <div class="g-item g-tall" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9241.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">02</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_9462.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">03</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_9251.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">04</span></div>
-        </div>
-
-        <div class="g-item g-wide" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9127.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">05</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_9482.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">06</span></div>
-        </div>
-
-        <div class="g-item g-tall" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_9471.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">07</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_1370.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">08</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_9550.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">09</span></div>
-        </div>
-
-        <div class="g-item g-wide" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_8538.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">10</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9033.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">11</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_9564.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">12</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_9288.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">13</span></div>
-        </div>
-
-        <div class="g-item g-tall" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_1502.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">14</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_9676.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">15</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_9698.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">16</span></div>
-        </div>
-
-        <div class="g-item g-wide" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9660.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">17</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_0008.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">18</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_1212.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">19</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_1374.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">20</span></div>
-        </div>
-
-        <div class="g-item g-tall" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_0170.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">21</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_9885.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">22</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_1690.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">23</span></div>
-        </div>
-
-        <div class="g-item g-wide" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_0798.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Ornamental</span><span class="g-num">24</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_1728.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">25</span></div>
-        </div>
-
-        <div class="g-item g-tall" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_8497.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">26</span></div>
-        </div>
-
-        <div class="g-item" data-cat="ornamental">
-          <div class="g-img-wrap"><img src="../img/portafolio/color/IMG_5331.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-num">27</span><span class="g-cat">Ornamental</span></div>
-        </div>
-
-        <div class="g-item" data-cat="blackwork">
-          <div class="g-img-wrap"><img src="../img/portafolio/grises/IMG_4310.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Blackwork</span><span class="g-num">28</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9406.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">29</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9516.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">30</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9622.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">31</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9648.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">32</span></div>
-        </div>
-
-        <div class="g-item" data-cat="linework">
-          <div class="g-img-wrap"><img src="../img/portafolio/linea/IMG_9898.JPG" alt="" loading="lazy"/></div>
-          <div class="g-overlay"><span class="g-cat">Linework</span><span class="g-num">33</span></div>
-        </div>
-
-      </div><!-- /grid -->
+        <p class="cat-desc">Patrones geométricos y florales.<br>Composición y simetría.</p>
+      </div>
+      <div class="cat-grid" id="grid-ornamental">
+        <div class="ci ci--lg"><div class="ci-img"><img src="../img/portafolio/color/IMG_9462.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_9482.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_9550.JPG" loading="lazy"/></div></div>
+        <div class="ci ci--wide"><div class="ci-img"><img src="../img/portafolio/color/IMG_9676.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_9564.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_0008.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_0170.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_0798.JPG" loading="lazy"/></div></div>
+        <div class="ci"><div class="ci-img"><img src="../img/portafolio/color/IMG_5331.JPG" loading="lazy"/></div></div>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta">
-    <div class="container cta__inner">
-      <h2 class="cta__title animation-title">AGENDAR</h2>
-      <div class="cta__body">
-        <p class="cta__text">Escríbeme con tu idea y coordinamos una consulta sin costo para ver si somos un buen fit.</p>
-        <a href="../#cita" class="cta__btn link-hover">Agendar cita →</a>
+  <section class="cta-section">
+    <div class="wrap cta-inner">
+      <h2 class="cta-title anim-title">AGENDAR</h2>
+      <div class="cta-right">
+        <p class="cta-text">Cada pieza diseñada exclusivamente para ti. Escríbeme y coordinamos una consulta sin costo.</p>
+        <a href="../#cita" class="cta-btn">Reservar cita →</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <a href="../" class="footer__logo link-hover">Caroline Tattoo</a>
-      <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="footer__ig link-hover">@caroline_tattoo_art ↗</a>
-      <span class="footer__copy">© 2025</span>
+    <div class="wrap footer-inner">
+      <a href="../" class="footer-logo">Caroline Tattoo</a>
+      <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="footer-ig">@caroline_tattoo_art ↗</a>
+      <span>© 2025</span>
     </div>
   </footer>
 
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
-    <button class="lb-close" id="lbClose">✕</button>
-    <button class="lb-prev" id="lbPrev">←</button>
-    <button class="lb-next" id="lbNext">→</button>
-    <div class="lb-wrap"><img id="lbImg" src="" alt="" /></div>
-    <p class="lb-caption" id="lbCaption"></p>
+    <button class="lb-x" id="lbClose">✕</button>
+    <button class="lb-arrow lb-arrow--prev" id="lbPrev">←</button>
+    <button class="lb-arrow lb-arrow--next" id="lbNext">→</button>
+    <div class="lb-img-wrap"><img id="lbImg" src="" alt=""/></div>
+    <p class="lb-info" id="lbInfo"></p>
   </div>
 
   <script src="script.js"></script>
