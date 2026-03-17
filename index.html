@@ -47,7 +47,90 @@
     </div>
     <div class="hero-img-wrap">
       <div class="hero-img">
-        <div class="placeholder hero-ph">Tu foto principal</div>
+        <img src="img/portafolio/color/IMG_0008.JPG" alt="Caroline Tattoo" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="hero-chip"><span class="chip-dot"></span>Disponible para citas</div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Blackwork</span><span class="tdot">·</span><span>Linework</span><span class="tdot">·</span><span>Ornamental</span><span class="tdot">·</span><span>Minimalista</span><span class="tdot">·</span><span>Flash disponible</span><span class="tdot">·</span><span>Viña del Mar</span><span class="tdot">·</span><span>Blackwork</span><span class="tdot">·</span><span>Linework</span><span class="tdot">·</span><span>Ornamental</span><span class="tdot">·</span><span>Minimalista</span><span class="tdot">·</span><span>Flash disponible</span><span class="tdot">·</span><span>Viña del Mar</span><span class="tdot">·</span>
+    </div>
+  </div>
+
+  <!-- PORTAFOLIO -->
+  <section id="portafolio" class="section">
+    <div class="sec-head">
+      <div><p class="label">Trabajos</p><h2>Portafolio</h2></div>
+      <div class="filters">
+        <button class="f-btn active" data-filter="all">Todo</button>
+        <button class="f-btn" data-filter="blackwork">Blackwork</button>
+        <button class="f-btn" data-filter="linework">Linework</button>
+        <button class="f-btn" data-filter="ornamental">Ornamental</button>
+        <button class="f-btn" data-filter="minimalista">Minimalista</button>
+      </div>
+    </div>
+    <div class="carousel-outer">
+      <div class="carousel" id="carousel">
+        <div class="slide" data-category="blackwork"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/grises/IMG_9058.JPG" alt="Blackwork" loading="lazy"></div><div class="slide-meta"><span>Blackwork</span><span class="slide-num">01</span></div></div></div>
+        <div class="slide" data-category="linework"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/linea/IMG_1370.JPG" alt="Linework" loading="lazy"></div><div class="slide-meta"><span>Linework</span><span class="slide-num">02</span></div></div></div>
+        <div class="slide" data-category="ornamental"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/color/IMG_9462.JPG" alt="Ornamental" loading="lazy"></div><div class="slide-meta"><span>Ornamental</span><span class="slide-num">03</span></div></div></div>
+        <div class="slide" data-category="blackwork"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/grises/IMG_9251.JPG" alt="Blackwork" loading="lazy"></div><div class="slide-meta"><span>Blackwork</span><span class="slide-num">04</span></div></div></div>
+        <div class="slide" data-category="linework"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/linea/IMG_9241.JPG" alt="Linework" loading="lazy"></div><div class="slide-meta"><span>Linework</span><span class="slide-num">05</span></div></div></div>
+        <div class="slide" data-category="ornamental"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/color/IMG_9482.JPG" alt="Ornamental" loading="lazy"></div><div class="slide-meta"><span>Ornamental</span><span class="slide-num">06</span></div></div></div>
+        <div class="slide" data-category="blackwork"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/grises/IMG_9288.JPG" alt="Blackwork" loading="lazy"></div><div class="slide-meta"><span>Blackwork</span><span class="slide-num">07</span></div></div></div>
+        <div class="slide" data-category="linework"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/linea/IMG_9127.JPG" alt="Linework" loading="lazy"></div><div class="slide-meta"><span>Linework</span><span class="slide-num">08</span></div></div></div>
+        <div class="slide" data-category="ornamental"><div class="slide-inner"><div class="slide-img"><img src="img/portafolio/color/IMG_9550.JPG" alt="Ornamental" loading="lazy"></div><div class="slide-meta"><span>Ornamental</span><span class="slide-num">09</span></div></div></div>>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caroline Tattoo — Viña del Mar</title>
+  <meta name="description" content="Tatuadora profesional en Viña del Mar. Blackwork, linework y diseños personalizados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <nav id="nav">
+    <a href="#inicio" class="nav-logo">Caroline</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#sobre-mi">Yo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="ico-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="ico-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#cita" class="nav-cta">Agendar</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="pulse-dot"></span>Viña del Mar, Chile</p>
+      <h1>El arte<br><em>permanece.</em></h1>
+      <p class="hero-desc">Blackwork y linework. Cada pieza diseñada para durar toda una vida.</p>
+      <div class="hero-btns">
+        <a href="#cita" class="btn-fill">Agendar cita <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#portafolio" class="btn-outline">Ver portafolio</a>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-img">
+        <img src="img/portafolio/color/IMG_0008.JPG" alt="Caroline Tattoo" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="hero-chip"><span class="chip-dot"></span>Disponible para citas</div>
     </div>
@@ -127,7 +210,7 @@
   <!-- SOBRE MÍ -->
   <section id="sobre-mi" class="section sobre">
     <div class="sobre-img reveal">
-      <div class="sobre-frame"><div class="placeholder sobre-ph">Tu foto<br>de perfil</div></div>
+      <div class="sobre-frame"><img src="img/portafolio/grises/IMG_9885.JPG" alt="Caroline" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="sobre-chip2">3 años · Blackwork · VdM</div>
     </div>
     <div class="sobre-body">
