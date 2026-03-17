@@ -67,7 +67,7 @@ ul { list-style: none; }
 /* ── HERO ── */
 .hero {
   max-width: 980px; margin: 0 auto;
-  padding: 6.5rem 1.75rem 7rem;
+  padding: 9rem 1.75rem 7rem;
   display: flex; flex-direction: column; align-items: center; text-align: center;
 }
 .hero-img-box {
@@ -93,8 +93,8 @@ ul { list-style: none; }
 
 /* Quote — secondary, smaller, lighter */
 .hero-q {
-  font-size: clamp(.78rem, 1.4vw, .95rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  font-weight: 700;
   line-height: 1.5;
   max-width: 520px;
   color: #444;
