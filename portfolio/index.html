@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio — Caroline Tattoo</title>
+  <meta name="description" content="Portafolio de tatuajes — Blackwork, Linework, Ornamental y Minimalista. Viña del Mar, Chile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&display=swap" rel="stylesheet" />
+  <!-- GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="pre-line"></div>
+    <span class="pre-num" id="preNum">0</span>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-inner"></div>
+  </div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="../" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Caroline
+    </a>
+    <div class="nav-center">
+      <span class="nav-title">Portafolio</span>
+    </div>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeToggle" aria-label="Tema">
+        <svg class="ico-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="../#cita" class="nav-cta">Agendar cita</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-label split-text">Viña del Mar · Chile</p>
+      <h1 class="hero-title">
+        <span class="line-mask"><span class="line-inner split-line">Portafolio</span></span>
+        <span class="line-mask italic-line"><em class="line-inner split-line">de tatuajes</em></span>
+      </h1>
+      <div class="hero-meta">
+        <span class="split-text">Blackwork · Linework · Ornamental · Minimalista</span>
+        <span class="hero-count split-text" id="heroCount">— 09 trabajos</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-progress"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <div class="filters-bar" id="filtersBar">
+    <div class="filters-inner">
+      <button class="f-btn active" data-filter="all">Todo <span class="f-count">09</span></button>
+      <button class="f-btn" data-filter="blackwork">Blackwork <span class="f-count">03</span></button>
+      <button class="f-btn" data-filter="linework">Linework <span class="f-count">02</span></button>
+      <button class="f-btn" data-filter="ornamental">Ornamental <span class="f-count">02</span></button>
+      <button class="f-btn" data-filter="minimalista">Minimalista <span class="f-count">02</span></button>
+    </div>
+  </div>
+
+  <!-- WORK LIST -->
+  <section class="work-section" id="workSection">
+    <ul class="work-list" id="workList">
+
+      <li class="work-item" data-category="blackwork" data-index="01">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">01</span>
+            <div class="work-text">
+              <h2 class="work-title">Serpiente sagrada</h2>
+              <p class="work-tags">Blackwork · Antebrazo</p>
+            </div>
+          </div>
+          <span class="work-year">2024</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">bw-01</div>
+          <!-- <img src="../assets/portfolio/bw-01.jpg" alt="Serpiente sagrada" /> -->
+        </div>
+      </li>
+
+      <li class="work-item" data-category="linework" data-index="02">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">02</span>
+            <div class="work-text">
+              <h2 class="work-title">Geometría lunar</h2>
+              <p class="work-tags">Linework · Costilla</p>
+            </div>
+          </div>
+          <span class="work-year">2024</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">lw-01</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="ornamental" data-index="03">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">03</span>
+            <div class="work-text">
+              <h2 class="work-title">Mandala floral</h2>
+              <p class="work-tags">Ornamental · Espalda</p>
+            </div>
+          </div>
+          <span class="work-year">2024</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">or-01</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="minimalista" data-index="04">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">04</span>
+            <div class="work-text">
+              <h2 class="work-title">Trazo único</h2>
+              <p class="work-tags">Minimalista · Muñeca</p>
+            </div>
+          </div>
+          <span class="work-year">2024</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">mn-01</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="blackwork" data-index="05">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">05</span>
+            <div class="work-text">
+              <h2 class="work-title">Ojo eterno</h2>
+              <p class="work-tags">Blackwork · Pecho</p>
+            </div>
+          </div>
+          <span class="work-year">2023</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">bw-02</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="linework" data-index="06">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">06</span>
+            <div class="work-text">
+              <h2 class="work-title">Ramas de olivo</h2>
+              <p class="work-tags">Linework · Tobillo</p>
+            </div>
+          </div>
+          <span class="work-year">2023</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">lw-02</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="ornamental" data-index="07">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">07</span>
+            <div class="work-text">
+              <h2 class="work-title">Corona de espinas</h2>
+              <p class="work-tags">Ornamental · Brazo</p>
+            </div>
+          </div>
+          <span class="work-year">2023</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">or-02</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="blackwork" data-index="08">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">08</span>
+            <div class="work-text">
+              <h2 class="work-title">Lobo oscuro</h2>
+              <p class="work-tags">Blackwork · Muslo</p>
+            </div>
+          </div>
+          <span class="work-year">2023</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">bw-03</div>
+        </div>
+      </li>
+
+      <li class="work-item" data-category="minimalista" data-index="09">
+        <a href="#" class="work-link">
+          <div class="work-info">
+            <span class="work-num">09</span>
+            <div class="work-text">
+              <h2 class="work-title">Punto cardinal</h2>
+              <p class="work-tags">Minimalista · Nuca</p>
+            </div>
+          </div>
+          <span class="work-year">2023</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <div class="work-hover-img">
+          <div class="placeholder">mn-02</div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- CTA BOTTOM -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <p class="cta-label split-text">¿Te gustó lo que ves?</p>
+      <h2 class="cta-title">
+        <span class="line-mask"><span class="line-inner split-line">Hagamos algo</span></span>
+        <span class="line-mask"><em class="line-inner split-line">tuyo.</em></span>
+      </h2>
+      <div class="cta-btns">
+        <a href="../#cita" class="btn-fill">
+          Agendar consulta
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener" class="btn-outline">
+          Instagram →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../" class="footer-logo">Caroline</a>
+      <p class="footer-copy">© 2025 Caroline Tattoo · Viña del Mar</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/56937021461" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
