@@ -133,14 +133,18 @@ ul { list-style: none; }
 
 /* ─ CAROUSEL ─ */
 .cr { display: flex; flex-direction: column; gap: .5rem; }
-.carousel { width: 100%; }
-.sl { display: none; grid-template-columns: 1fr 1fr; gap: .4rem; }
+.carousel { width: 100%; overflow: hidden; touch-action: pan-y; }
+.sl { display: none; grid-template-columns: 1fr 1fr; gap: .4rem; width: 100%; }
 .sl.active { display: grid; }
 .sl img {
-  width: 100%; aspect-ratio: 9/16;
-  object-fit: cover; border-radius: 7px; display: block;
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 7px;
+  display: block;
   cursor: zoom-in;
   transition: transform .5s ease;
+  min-width: 0;
 }
 .sl img:hover { transform: scale(1.025); }
 
