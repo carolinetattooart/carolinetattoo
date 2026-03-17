@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var hq = document.querySelector('.hero-q');
   if (hq) setTimeout(function() { hq.classList.add('show'); }, 50);
 
-  /* ── REVEAL CASES ── */
+  /* ── REVEAL ── */
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
@@ -44,60 +44,74 @@ document.addEventListener('DOMContentLoaded', function() {
     var s = state[cid];
     if (!s || s.busy || s.slides.length < 2) return;
     s.busy = true;
-
     var oldIdx = s.cur;
     s.cur = (s.cur + dir + s.slides.length) % s.slides.length;
     var newIdx = s.cur;
-
     s.slides[oldIdx].classList.add('out');
-
     setTimeout(function() {
       s.slides[oldIdx].classList.remove('active', 'out');
       s.slides[newIdx].classList.add('active', 'in');
-      setTimeout(function() {
-        s.slides[newIdx].classList.remove('in');
-        s.busy = false;
-      }, 320);
+      setTimeout(function() { s.slides[newIdx].classList.remove('in'); s.busy = false; }, 320);
       var cntEl = document.getElementById(cntMap[cid]);
       if (cntEl) cntEl.textContent = (newIdx + 1) + ' / ' + s.slides.length;
     }, 260);
   }
 
-  /* Buttons */
+  /* Arrow buttons */
   document.querySelectorAll('.cb').forEach(function(btn) {
     btn.addEventListener('click', function() {
       go(btn.getAttribute('data-c'), parseInt(btn.getAttribute('data-d')));
     });
   });
 
-  /* Swipe — one listener per carousel */
+  /* ── SWIPE + MOUSE DRAG ── */
   document.querySelectorAll('.carousel').forEach(function(car) {
-    var cid  = car.id;
-    var startX = 0;
-    var startY = 0;
-    var tracking = false;
+    var cid     = car.id;
+    var startX  = 0;
+    var startY  = 0;
+    var isDrag  = false;
+    var moved   = false;
+    var THRESHOLD = 40;
 
+    /* ── TOUCH (mobile) ── */
     car.addEventListener('touchstart', function(e) {
-      startX   = e.touches[0].clientX;
-      startY   = e.touches[0].clientY;
-      tracking = true;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      moved  = false;
     }, { passive: true });
 
     car.addEventListener('touchmove', function(e) {
-      if (!tracking) return;
       var dx = Math.abs(e.touches[0].clientX - startX);
       var dy = Math.abs(e.touches[0].clientY - startY);
-      /* If mostly horizontal swipe, prevent page scroll */
-      if (dx > dy && dx > 8) e.preventDefault();
+      if (dx > dy && dx > 8) { e.preventDefault(); moved = true; }
     }, { passive: false });
 
     car.addEventListener('touchend', function(e) {
-      if (!tracking) return;
-      tracking = false;
       var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) < 40) return;
-      go(cid, diff > 0 ? 1 : -1);
+      if (Math.abs(diff) >= THRESHOLD) go(cid, diff > 0 ? 1 : -1);
     }, { passive: true });
+
+    /* ── MOUSE DRAG (desktop) ── */
+    car.addEventListener('mousedown', function(e) {
+      startX = e.clientX;
+      isDrag = true;
+      moved  = false;
+      car.classList.add('dragging');
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', function(e) {
+      if (!isDrag) return;
+      if (Math.abs(e.clientX - startX) > 8) moved = true;
+    });
+
+    window.addEventListener('mouseup', function(e) {
+      if (!isDrag) return;
+      isDrag = false;
+      car.classList.remove('dragging');
+      var diff = startX - e.clientX;
+      if (Math.abs(diff) >= THRESHOLD) go(cid, diff > 0 ? 1 : -1);
+    });
   });
 
   /* ── LIGHTBOX ── */
@@ -108,7 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var idx = 0;
 
   allImgs.forEach(function(img, i) {
-    img.addEventListener('click', function() {
+    img.addEventListener('click', function(e) {
+      /* Don't open lightbox if user was dragging */
       idx     = i;
       lbi.src = img.src;
       lbc.textContent = (i + 1) + ' / ' + allImgs.length;
@@ -135,9 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('lb-n').addEventListener('click', function() { lbGo(idx + 1); });
   document.addEventListener('keydown', function(e) {
     if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape')      lbClose();
-    if (e.key === 'ArrowLeft')   lbGo(idx - 1);
-    if (e.key === 'ArrowRight')  lbGo(idx + 1);
+    if (e.key === 'Escape')     lbClose();
+    if (e.key === 'ArrowLeft')  lbGo(idx - 1);
+    if (e.key === 'ArrowRight') lbGo(idx + 1);
   });
 
 });
