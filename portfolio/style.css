@@ -63,8 +63,9 @@ ul { list-style: none; }
   border-radius: 8px; overflow: hidden;
   margin-bottom: 2rem; flex-shrink: 0;
 }
-.hero-img-box img { width: 158px; height: 194px; object-fit: cover; object-position: top; display: block; }
+.hero-img-box img { width: 158px; height: 194px; object-fit: cover; object-position: top; display: block; filter: grayscale(100%); }
 
+.hero-name { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #888; margin-bottom: 1.5rem; }
 .hero-q {
   font-size: clamp(.95rem, 2.2vw, 1.55rem);
   font-weight: 700; line-height: 1.3;
