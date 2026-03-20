@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carolina Pizarro — Portfolio</title>
+  <title>Caroline Tattoo — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
@@ -12,13 +12,13 @@
 </head>
 <body>
 
-  <!-- NAV: pill + badge | About me | red btn | | | dark btn -->
+  <!-- NAV -->
   <nav id="nav">
     <div class="nav-inner">
       <a href="../" class="nav-left">
         <div class="nav-pill">
-          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="white" stroke-width="1.5"/><path d="M8 5v3M8 11v.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
-          Carolina Pizarro
+          <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="white" stroke-width="1.5"/><path d="M8 5v3M8 11v.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Caroline Tattoo
         </div>
         <span class="nav-badge">Portfolio v1</span>
       </a>
@@ -35,16 +35,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-img-box">
-      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=500&fit=crop&crop=faces&q=80" alt="Carolina Pizarro"/>
+      <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=400&h=500&fit=crop&crop=faces&q=80" alt="Caroline Tattoo"/>
     </div>
-    <p class="hero-name">Carolina Pizarro</p>
-    <p class="hero-subtitle">Caroline Tattoo Art</p>
-    <h1 class="hero-q">"Artista del tatuaje chilena, ubicada en Viña del Mar.<br/>Creadora de diseños que interpretan una historia, únicos y que perduran toda la vida."</h1>
-    </section>
+    <!-- Spell UI: blur-reveal on name -->
+    <p class="hero-name spell-blur" data-spell="blur">Caroline Tattoo Art</p>
+    <!-- Spell UI: words-stagger on quote -->
+    <h1 class="hero-q spell-words" data-spell="words">"Artista del tatuaje chilena, ubicada en Viña del Mar. Creadora de diseños que interpretan una historia, únicos y que perduran toda la vida."</h1>
+  </section>
 
   <!-- ONGOING CARD -->
   <div class="ong">
-    <div class="ong-card">
+    <div class="ong-card spell-slide" data-spell="slide">
       <div class="ong-top">
         <span class="ong-lbl">PROYECTOS EN CURSO</span>
         <span class="ong-date">Última actualización 2025</span>
@@ -53,12 +54,12 @@
     </div>
   </div>
 
-  <!-- CASE 1: LÍNEAS -->
+  <!-- CASE: LÍNEAS -->
   <article class="case" id="lineas">
     <div class="case-inner">
       <div class="cl">
         <div class="case-top">
-          <span class="case-title">LÍNEAS</span>
+          <span class="case-title spell-blur" data-spell="blur">LÍNEAS</span>
           <span class="case-sub">Fineline (Técnica)</span>
         </div>
         <div class="rows">
@@ -86,12 +87,12 @@
     </div>
   </article>
 
-  <!-- CASE 2: COLOR -->
+  <!-- CASE: COLOR -->
   <article class="case" id="color">
     <div class="case-inner">
       <div class="cl">
         <div class="case-top">
-          <span class="case-title">COLOR</span>
+          <span class="case-title spell-blur" data-spell="blur">COLOR</span>
           <span class="case-sub">técnica mixta</span>
         </div>
         <div class="rows">
@@ -117,12 +118,12 @@
     </div>
   </article>
 
-  <!-- CASE 3: SOMBRAS -->
+  <!-- CASE: SOMBRAS -->
   <article class="case" id="sombras">
     <div class="case-inner">
       <div class="cl">
         <div class="case-top">
-          <span class="case-title">SOMBRAS</span>
+          <span class="case-title spell-blur" data-spell="blur">SOMBRAS</span>
           <span class="case-sub">Blackwork</span>
         </div>
         <div class="rows">
@@ -148,10 +149,10 @@
     </div>
   </article>
 
-  <!-- FOR CLIENTS / FOR STUDIOS — exact Flavio layout -->
+  <!-- FOR SECTION -->
   <section class="for-sec">
     <div class="for-inner">
-      <div class="for-col">
+      <div class="for-col spell-slide" data-spell="slide">
         <p class="for-t">PARA CLIENTES <sup>01</sup></p>
         <ul class="for-ul">
           <li>Diseño de tatuaje personalizado desde cero</li>
@@ -162,7 +163,7 @@
         </ul>
         <a href="../#cita" class="for-btn">Reservar sesión 📅</a>
       </div>
-      <div class="for-col">
+      <div class="for-col spell-slide" data-spell="slide" style="--spell-delay:0.12s">
         <p class="for-t">PARA ESTUDIOS <sup>02</sup></p>
         <ul class="for-ul">
           <li>Colaboraciones como artista invitada</li>
@@ -176,29 +177,22 @@
     </div>
   </section>
 
-  <!-- FIND ME AT — exact Flavio layout -->
+  <!-- FIND ME AT -->
   <section class="find-sec">
     <div class="find-top">
       <span class="find-t">ENCUÉNTRAME EN</span>
-      <a href="mailto:hola@carolinapizarro.com" class="find-email">hola@carolinapizarro.com 📋</a>
+      <a href="mailto:hola@carolinetattoo.com" class="find-email">hola@carolinetattoo.com 📋</a>
     </div>
     <div class="find-links">
-      <div class="find-item">
-        <span class="find-lbl">Instagram</span>
-        <a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="find-val">@caroline_tattoo_art</a>
-      </div>
-      <div class="find-item">
-        <span class="find-lbl">Estudio</span>
-        <a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="find-val">@ikigai_tatuajes</a>
-      </div>
+      <div class="find-item spell-slide" data-spell="slide"><span class="find-lbl">Instagram</span><a href="https://www.instagram.com/caroline_tattoo_art/" target="_blank" class="find-val">@caroline_tattoo_art</a></div>
+      <div class="find-item spell-slide" data-spell="slide" style="--spell-delay:0.08s"><span class="find-lbl">Estudio</span><a href="https://www.instagram.com/ikigai_tatuajes/" target="_blank" class="find-val">@ikigai_tatuajes</a></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
-      <span>carolina pizarro</span>
-      <span>tatuadora &amp; diseñadora</span>
+      <span>caroline tattoo art</span>
+      <span>tatuadora &amp; diseñadora · viña del mar</span>
     </div>
   </footer>
 
