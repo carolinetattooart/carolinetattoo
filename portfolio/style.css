@@ -91,6 +91,15 @@ ul { list-style: none; }
   margin-bottom: 1.25rem;
 }
 
+.hero-subtitle {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgb(220,38,68);
+  margin-bottom: 1.5rem;
+}
+
 /* Quote — secondary, smaller, lighter */
 .hero-q {
   font-size: clamp(1rem, 2vw, 1.45rem);
